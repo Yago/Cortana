@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="./build/css/cortana.css">
 
     <!-- Base CSS -->
-    <link rel="stylesheet" href="../resources/screen.css">
+    <!-- <link rel="stylesheet" href="../resources/screen.css"> -->
 </head>
 
-  <body>
+  <body class="cortana-body">
 
-    <div class="sb-slidebar sb-left">
+    <div class="sb-slidebar sb-left cortana-sidenav sb-width-custom" data-sb-width="250">
 
       <% catWrappers = Array.new %>
       <% @categories.each do |cat| %>
@@ -32,7 +32,22 @@
           <%= wrapper %>
           <% @categories.each do |cat| %>
             <% if cat[0].include?(wrapper) %>
-              <li><a href="<%= cat[1] %>"><%= cat[0].split('_').last %></a></li>
+              <% catName = cat[0].split('_').last %>
+              <li><a href="<%= cat[1] %>"><%= catName %></a></li>
+            <% end %>
+          <% end %>
+        <% end %>
+
+        <% catWrappers.each do |wrapper| %>
+          <%= wrapper %>
+          <% @categories.each do |cat| %>
+            <% if cat[0].include?(wrapper) %>
+              <% catName = cat[0].split('_').last %>
+              <% if catName == title.split('_').last %>
+              <li><a href="<%= cat[1] %>"><%= catName %></a></li>
+              <% else %>
+                <li><a href="<%= cat[1] %>"><%= catName %></a></li>
+              <% end %>
             <% end %>
           <% end %>
         <% end %>
@@ -42,8 +57,13 @@
 
     <div id="sb-site">
 
-      <header>
-        <div id="menu-btn" class="menu-btn sb-toggle-left"></div>
+      <header class="cortana-header">
+        <h1><%= title.split('_').last %></h1>
+        <div class="cortana-menu-btn sb-toggle-left">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </header>
 
       <div class="cortana-container">

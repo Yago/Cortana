@@ -1,3 +1,20 @@
+.cortana-body, #sb-site {
+  background: lighten($wetAsphalt, 60%);
+}
+
+.cortana-header {
+  background: $night;
+  padding: 15px 0;
+  position: relative;
+  h1 {
+    color: $white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: $openSans;
+  }
+}
+
 .cortana-container {
   max-width: 900px;
   margin: 0 auto;
