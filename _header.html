@@ -16,7 +16,7 @@
 
   <body class="cortana-body">
 
-    <div class="sb-slidebar sb-left cortana-sidenav sb-width-custom" data-sb-width="250">
+    <div class="sb-slidebar sb-left cortana-sidenav sb-style-push">
 
       <% catWrappers = Array.new %>
       <% @categories.each do |cat| %>
@@ -26,40 +26,30 @@
         <% end %>
       <% end %>
 
-      <ul>
-
+      <nav class="cortana-nav">
         <% catWrappers.each do |wrapper| %>
-          <%= wrapper %>
-          <% @categories.each do |cat| %>
-            <% if cat[0].include?(wrapper) %>
-              <% catName = cat[0].split('_').last %>
-              <li><a href="<%= cat[1] %>"><%= catName %></a></li>
-            <% end %>
-          <% end %>
-        <% end %>
-
-        <% catWrappers.each do |wrapper| %>
-          <%= wrapper %>
+          <h3><%= wrapper %></h3>
+          <ul>
           <% @categories.each do |cat| %>
             <% if cat[0].include?(wrapper) %>
               <% catName = cat[0].split('_').last %>
               <% if catName == title.split('_').last %>
-              <li><a href="<%= cat[1] %>"><%= catName %></a></li>
+              <li><a class="active" href="<%= cat[1] %>"><%= catName %></a></li>
               <% else %>
                 <li><a href="<%= cat[1] %>"><%= catName %></a></li>
               <% end %>
             <% end %>
           <% end %>
+          </ul>
         <% end %>
-
-      </ul>
+      </nav>
     </div>
 
     <div id="sb-site">
 
       <header class="cortana-header">
         <h1><%= title.split('_').last %></h1>
-        <div class="cortana-menu-btn sb-toggle-left">
+        <div id="open-left" class="cortana-menu-btn">
           <span></span>
           <span></span>
           <span></span>
