@@ -1,0 +1,33 @@
+.cortana-content {
+  h1, h2, h3, h4, h5, h6{
+    font-family: $openSans !important;
+    margin: 2em 0 0.4em 0;
+    line-height: 1.2em;
+    padding: 0.4em 30px;
+    border-bottom: 1px solid lighten($wetAsphalt, 66%);
+    color: $mine;
+  }
+  p {
+    font-family: $openSans !important;
+    line-height: 1.6em;
+    padding: 0 30px;
+  }
+  table {
+    margin: 0 30px;
+    font-family: $openSans !important;
+    border-collapse:collapse;
+  }
+  table tr, table td, table th {
+    padding: 7px;
+    border: 1px solid #ccc;
+  }
+  table th {
+    font-weight: bold;
+    color: $mine;
+  }
+  &:first-child {
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 0;
+    }
+  }
+}
