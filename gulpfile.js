@@ -12,21 +12,59 @@ var gulp = require('gulp'),
     shell = require('gulp-shell'),
     stylish = require('jshint-stylish');
 
-// gulp.task('browser-sync', function() {
-//     browserSync.init(['../docs/*'], {
-//       proxy: 'localhost'
-//     });
-// });
+// SASS compile, autoprefix and minify task
+gulp.task('styles', function() {
+  return gulp.src('./assets/sass/cortana.scss')
+    .pipe(sass())
+    .on('error', gutil.beep)
+    .on('error', notify.onError("Error: <%= error.message %>"))
+    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
+    .pipe(minifycss())
+    .pipe(gulp.dest('./build/css'));
+});
 
-gulp.task('hologram', function () {
-  gulp.src('./')
-    .pipe(shell('echo <%= file.path %>/../'))
-})
+// CSS vendors concat and minify
+gulp.task('css_vendors', function() {
+  gulp.src([
+      './vendors/Slidebars/distribution/0.9.4/slidebars.css'
+    ])
+    .pipe(concat('vendors.css'))
+    .pipe(minifycss())
+    .pipe(gulp.dest('./build/css'))
+});
 
-gulp.task('default', ['watch', 'hologram']);
+// JS task
+gulp.task('scripts', function() {
+  gulp.src('./assets/js/*.js')
+    .pipe(jshint())
+    .pipe(jshint.reporter('jshint-stylish'))
+    .pipe(concat('main.js'))
+    .pipe(gulp.dest('./build/js'))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(uglify())
+    .pipe(gulp.dest('./build/js'));
+});
+
+// JS vendors concat and minify
+gulp.task('js_vendors', function() {
+  gulp.src([
+      './vendors/jquery/dist/jquery.js',
+      './vendors/Slidebars/distribution/0.9.4/slidebars.min.js'
+    ])
+    .pipe(concat('vendors.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./build/js'));
+});
+
+gulp.task('browser-sync', function() {
+    browserSync.init(['./build/css/*.css', '*.php', './build/js/*.js'], {
+      proxy: 'localhost'
+    });
+});
+
+gulp.task('default', ['watch', 'js_vendors', 'css_vendors', 'styles', 'scripts', 'browser-sync']);
 
 gulp.task('watch', function() {
-  // gulp.watch('./assets/sass/*.scss', ['styles']);
-  // gulp.watch('./assets/js/*.js', ['scripts']);
-  gulp.watch('./_header.html', ['hologram']);
+  gulp.watch('./assets/sass/*.scss', ['styles']);
+  gulp.watch('./assets/js/*.js', ['scripts']);
 });

@@ -6,15 +6,17 @@
 
     <title><%= title %></title>
 
-    <!-- Styleguide CSS -->
-
-    <!-- CSS to be documented -->
+    <!-- Base CSS -->
     <link rel="stylesheet" href="../resources/screen.css">
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="./build/css/vendors.css">
+    <link rel="stylesheet" href="./build/css/cortana.css">
 </head>
 
   <body>
 
-    <header style="background: orange;">
+    <header>
 
       <% catWrappers = Array.new %>
       <% @categories.each do |cat| %>
