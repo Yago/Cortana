@@ -57,7 +57,7 @@ gulp.task('js_vendors', function() {
 });
 
 gulp.task('browser-sync', function() {
-    browserSync.init(['./build/css/*.css', '*.php', './build/js/*.js'], {
+    browserSync.init(['../docs/build/css/*.css', '../docs/*.html', '../docs/build/js/*.js'], {
       proxy: 'localhost'
     });
 });
