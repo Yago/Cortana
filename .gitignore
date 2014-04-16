@@ -1,0 +1,5 @@
+*.DS_Store
+.sass-cache
+.idea
+vendors
+node_modules

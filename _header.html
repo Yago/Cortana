@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title><%= title %></title>
+
+    <!-- Styleguide CSS -->
+
+    <!-- CSS to be documented -->
+    <link rel="stylesheet" href="../resources/screen.css">
+</head>
+
+  <body>
+
+    <header style="background: orange;">
+
+      <% catWrappers = Array.new %>
+      <% @categories.each do |cat| %>
+        <% catWrapperName = cat[0].split('_').first %>
+        <% if not catWrappers.include?(catWrapperName) %>
+          <% catWrappers.push(catWrapperName) %>
+        <% end %>
+      <% end %>
+
+      <ul>
+
+        <% catWrappers.each do |wrapper| %>
+          <%= wrapper %>
+          <% @categories.each do |cat| %>
+            <% if cat[0].include?(wrapper) %>
+              <li><a href="<%= cat[1] %>"><%= cat[0].split('_').last %></a></li>
+            <% end %>
+          <% end %>
+        <% end %>
+
+      </ul>
+    </header>
+    
+    <h1><%= @file_name %></h1>
+
+
+
