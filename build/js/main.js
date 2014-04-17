@@ -36,8 +36,8 @@
       event.preventDefault();
       $target = $(this).attr('href');
       $('html, body').animate({
-          scrollTop: $($target).offset().top - 70
-      }, 1000);
+          scrollTop: $($target).offset().top - 100
+      }, 800);
     });
   });
 }) (jQuery);
