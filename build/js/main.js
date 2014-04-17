@@ -35,6 +35,8 @@
     $('#cortana-inside-nav').find('a').click(function(event){
       event.preventDefault();
       $target = $(this).attr('href');
+      $('#cortana-inside-nav').find('a').removeClass('active');
+      $(this).addClass('active');
       $('html, body').animate({
           scrollTop: $($target).offset().top - 100
       }, 800);
