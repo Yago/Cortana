@@ -1,17 +1,21 @@
 .cortana-body, #sb-site {
-  background: lighten($wetAsphalt, 66%);
+  background: $softBlue;
 }
 
 .cortana-header {
   background: $night;
   padding: 15px 0;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
   h1 {
     color: $white;
     text-align: center;
     margin: 0;
     padding: 0;
-    font-family: $openSans;
+    font-family: $mainFont;
     font-weight: normal;
   }
 }
@@ -24,9 +28,24 @@
   padding-bottom: 40px;
   background: $white;
   border-radius: 4px;
-  margin-top: 30px;
+  margin-top: 100px;
 }
 
 .exampleOutput {
-  margin: 0 30px;
+  padding: 50px 30px;
+  border: 1px solid $softBlue;
+  position: relative;
+  &:after {
+    content: 'Example';
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: $asbestos;
+    border-right: 1px solid $softBlue;
+    border-bottom: 1px solid $softBlue;
+    border-bottom-right-radius: 4px;
+    padding: 5px 8px;
+    display: inline-block;
+    font-family: $mainFont;
+  }
 }

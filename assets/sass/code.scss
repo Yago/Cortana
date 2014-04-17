@@ -1,12 +1,36 @@
+.cortana-content code, .cortana-content pre {
+  font-family: $codeFont !important;
+  font-size: 14px;
+}
+
 .codeBlock {
-  margin: 0 30px;
-  padding: 10px 30px;
+  padding: 30px 30px;
   background: #1e221d;
   color: $white;
   font-size: 15px;
-  font-family: Monaco, monospace;
-  line-height: 1.4em;
+  line-height: 1.6em;
   overflow-x: scroll;
+  margin-bottom: 20px;
+  position: relative;
+  &:after {
+    content: 'HTML';
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: $asbestos;
+    border-right: 1px solid $asbestos;
+    border-bottom: 1px solid $asbestos;
+    border-bottom-right-radius: 4px;
+    padding: 5px 8px;
+    display: inline-block;
+    font-family: $mainFont;
+  }
+  &.jsExample:after {
+    content: 'JavaScript';
+  }
+  pre {
+    font-family: $codeFont !important;
+  }
 }
 hll { background-color: #ffffcc }
 .c { color: #999988; font-style: italic } /* Comment */

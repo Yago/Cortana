@@ -1,20 +1,21 @@
 .cortana-content {
   h1, h2, h3, h4, h5, h6{
-    font-family: $openSans !important;
+    font-family: $mainFont !important;
     margin: 2em 0 0.4em 0;
     line-height: 1.2em;
     padding: 0.4em 30px;
-    border-bottom: 1px solid lighten($wetAsphalt, 66%);
+    border-bottom: 1px solid $softBlue;
     color: $mine;
   }
   p {
-    font-family: $openSans !important;
+    font-family: $mainFont !important;
     line-height: 1.6em;
     padding: 0 30px;
+    margin: 1.8em 0;
   }
   table {
-    margin: 0 30px;
-    font-family: $openSans !important;
+    margin: 30px 30px;
+    font-family: $mainFont !important;
     border-collapse:collapse;
   }
   table tr, table td, table th {

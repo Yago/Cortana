@@ -36,7 +36,7 @@
     width: 90%;
     padding: 3px 5%;
     text-decoration: none;
-    font-family: $openSans;
+    font-family: $mainFont;
     color: $alizarin;
     &:hover, &.active {
       background: $alizarin;
@@ -47,7 +47,7 @@
     padding: 0 5%;
     margin: 30px 0 10px 0;
     padding-top: 20px;
-    font-family: $openSans;
+    font-family: $mainFont;
     border-top: 1px solid $silver;
     font-size: 16px;
     font-weight: normal;
