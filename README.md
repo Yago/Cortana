@@ -31,6 +31,10 @@ $ bower install
 $ gulp
 ```
 
+##@TODO
+[] Dynamic stylesheet/script files inclusion
+[] Dark theme
+
 ##Dependencies
 * [jQuery](https://github.com/jquery/jquery)
 * [Slidebars](https://github.com/adchsm/Slidebars), by adchsm
