@@ -1,6 +1,9 @@
 .cortana-content code, .cortana-content pre {
   font-family: $codeFont !important;
   font-size: 14px;
+  border: 1px solid $softBlue;
+  padding: 2px 5px;
+  border-radius: 2px;
 }
 
 .codeBlock {
