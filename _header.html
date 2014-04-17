@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-
     <title><%= title %></title>
 
     <!-- Styleguide CSS -->
@@ -27,14 +26,20 @@
       <% end %>
 
       <nav class="cortana-nav">
+        <ul>
+          <% if file_name.include?('index.html') %>
+            <li><a class="active" href="index.html">Home</a></li>
+          <% else %>
+            <li><a href="index.html">Home</a></li>
+          <% end %>
+        </ul>
         <% catWrappers.each do |wrapper| %>
           <h3><%= wrapper %></h3>
-          <ul>
           <% @categories.each do |cat| %>
             <% if cat[0].include?(wrapper) %>
               <% catName = cat[0].split('_').last %>
               <% if catName == title.split('_').last %>
-              <li><a class="active" href="<%= cat[1] %>"><%= catName %></a></li>
+                <li><a class="active" href="<%= cat[1] %>"><%= catName %></a></li>
               <% else %>
                 <li><a href="<%= cat[1] %>"><%= catName %></a></li>
               <% end %>
@@ -46,7 +51,9 @@
     </div>
 
     <header class="cortana-header sb-slide">
-      <h1><%= title.split('_').last %></h1>
+      <% if title.split('_').last %>
+        <h1><%= title.split('_').last %></h1>
+      <% end %>
       <div id="open-left" class="cortana-menu-btn">
         <span></span>
         <span></span>

@@ -24,7 +24,7 @@
 }
 
 .cortana-nav {
-  padding: 0;
+  padding: 10px 0;
   margin: 0;
   ul {
     padding: 0;
@@ -45,12 +45,19 @@
   }
   h3 {
     padding: 0 5%;
-    margin: 30px 0 10px 0;
+    margin: 20px 0 10px 0;
     padding-top: 20px;
     font-family: $mainFont;
-    border-top: 1px solid $silver;
+    border-top: 1px solid $silver !important;
     font-size: 16px;
     font-weight: normal;
     &:first-child {border: none;}
   }
 }
+
+
+
+
+
+
+
