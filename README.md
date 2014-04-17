@@ -32,8 +32,9 @@ $ gulp
 ```
 
 ##@TODO
-[] Dynamic stylesheet/script files inclusion
-[] Dark theme
+
+* Dynamic stylesheet/script files inclusion
+* Dark theme
 
 ##Dependencies
 * [jQuery](https://github.com/jquery/jquery)
