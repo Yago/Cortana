@@ -70,8 +70,11 @@
     display: block;
     width: 100%;
     padding: 5px 0;
+    text-decoration: none;
+    font-family: $mainFont;
     &:hover, &.active {color: $alizarin;}
   }
+  li {list-style-type: none;}
   ul {
     position: relative;
     top: -100px;

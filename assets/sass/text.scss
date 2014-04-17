@@ -1,49 +1,49 @@
 .cortana-content {
   h1, h2, h3, h4, h5, h6{
-    font-family: $mainFont !important !important;
-    margin: 2em 0 0.4em 0 !important;
-    line-height: 1.2em !important;
-    padding: 0.4em 30px !important;
-    border-bottom: 1px solid $softBlue !important;
-    color: $mine !important;
-    @media only screen and (max-width: 900px) {padding: 0.4em 10px !important;}
+    font-family: $mainFont !important;
+    margin: 2em 0 0.4em 0;
+    line-height: 1.2em;
+    padding: 0.4em 30px;
+    border-bottom: 1px solid $softBlue;
+    color: $mine;
+    @media only screen and (max-width: 900px) {padding: 0.4em 10px;}
   }
   h1 {
-    font-size: 36px !important;
-    @media only screen and (max-width: 900px) {font-size: 28px !important;}
+    font-size: 36px;
+    @media only screen and (max-width: 900px) {font-size: 28px;}
   }
   h2 {
-    font-size: 28px !important;
-    @media only screen and (max-width: 900px) {font-size: 23px !important;}
+    font-size: 28px;
+    @media only screen and (max-width: 900px) {font-size: 23px;}
   }
   h3 {
-    font-size: 25px !important;
-    @media only screen and (max-width: 900px) {font-size: 21px !important;}
+    font-size: 25px;
+    @media only screen and (max-width: 900px) {font-size: 21px;}
   }
   p {
-    font-family: $mainFont !important !important;
-    line-height: 1.6em !important;
-    padding: 0 30px !important;
-    margin: 1.8em 0 !important;
-    @media only screen and (max-width: 900px) {padding: 0 10px !important;}
+    font-family: $mainFont !important;
+    line-height: 1.6em;
+    padding: 0 30px;
+    margin: 1.8em 0;
+    @media only screen and (max-width: 900px) {padding: 0 10px;}
   }
   table {
-    margin: 30px 30px !important;
-    font-family: $mainFont !important !important;
-    border-collapse:collapse !important;
-    @media only screen and (max-width: 900px) {margin: 30px 10px !important;}
+    margin: 30px 30px;
+    font-family: $mainFont !important;
+    border-collapse:collapse;
+    @media only screen and (max-width: 900px) {margin: 30px 10px;}
   }
   table tr, table td, table th {
-    padding: 10px 15px !important;
-    border: 1px solid #ccc !important;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
   }
   table th {
-    font-weight: bold !important;
-    color: $mine !important;
+    font-weight: bold;
+    color: $mine;
   }
   &:first-child {
     h1, h2, h3, h4, h5, h6 {
-      margin-top: 0 !important;
+      margin-top: 0;
     }
   }
 }
