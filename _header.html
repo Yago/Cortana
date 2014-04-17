@@ -53,6 +53,8 @@
     <header class="cortana-header sb-slide">
       <% if title.split('_').last %>
         <h1><%= title.split('_').last %></h1>
+      <% elsif file_name.include?('index.html') %>
+        <h1>Styleguide home</h1>
       <% end %>
       <div id="open-left" class="cortana-menu-btn">
         <span></span>
