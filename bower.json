@@ -3,6 +3,7 @@
   "dependencies": {},
   "devDependencies": {
     "jquery": "1.11.*",
-    "Slidebars": "~0.9.4"
+    "Slidebars": "~0.9.4",
+    "sticky-kit": "~1.0.4"
   }
 }

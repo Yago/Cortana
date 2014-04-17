@@ -55,6 +55,30 @@
   }
 }
 
+.cortana-inside-nav {
+  margin-left: -190px;
+  width: 170px;
+  float: left;
+  margin-top: 100px;
+  &.cortana-stick-bottom {
+    position: fixed !important;
+    top: 0px !important;
+    bottom: auto !important;
+  }
+  a {
+    color: $mine;
+    display: block;
+    width: 100%;
+    padding: 3px 0;
+    &:hover {color: $alizarin;}
+  }
+  ul {
+    position: relative;
+    top: -100px;
+    margin-top: 100px;
+  }
+}
+
 
 
 

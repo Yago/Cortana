@@ -24,13 +24,18 @@
 .cortana-container {
   max-width: 900px;
   margin: 0 auto;
-  margin-bottom: 90px;
+  padding-bottom: 90px;
+  border: 1px solid $softBlue;
+}
+
+.cortana-content-wrapper {
   padding: 15px 0;
   padding-bottom: 40px;
   background: $white;
   border-radius: 4px;
   margin-top: 100px;
 }
+
 
 .exampleOutput {
   padding: 50px 30px;

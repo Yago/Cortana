@@ -67,3 +67,13 @@
 
       <div class="cortana-container">
 
+        <nav id="cortana-inside-nav" class="cortana-inside-nav">
+          <ul>
+            <% @blocks.each do |block| %> 
+              <li><a href="#<%= block[:name] %>"><%= block[:title] %></a></li>
+            <% end %>
+          </ul>
+        </nav>
+
+        <div class="cortana-content-wrapper">
+

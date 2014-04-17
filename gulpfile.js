@@ -49,7 +49,8 @@ gulp.task('scripts', function() {
 gulp.task('js_vendors', function() {
   gulp.src([
       './vendors/jquery/dist/jquery.js',
-      './vendors/Slidebars/distribution/0.9.4/slidebars.min.js'
+      './vendors/Slidebars/distribution/0.9.4/slidebars.min.js',
+      './vendors/sticky-kit/jquery.sticky-kit.js'
     ])
     .pipe(concat('vendors.min.js'))
     .pipe(uglify())
