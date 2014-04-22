@@ -6,6 +6,9 @@
   border-radius: 2px !important;
   background: $white !important;
   margin: 0 !important;
+  word-break: keep-all !important;
+  word-wrap: normal !important;
+  white-space:pre !important;
 }
 
 .codeBlock {
@@ -43,13 +46,13 @@
     background: #1e221d !important;
     word-break: keep-all !important;
     word-wrap: normal !important;
+    white-space:pre !important;
     margin: 0px !important;
     padding: 0px !important;
     padding-left: 15px !important;
     font-size: 14px !important;
     position: relative !important;
     line-height: 1.6em !important;
-    white-space:pre !important;
   }
   @media only screen and (max-width: 900px) {padding: 50px 10px !important;}
 }
