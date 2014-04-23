@@ -1,11 +1,11 @@
 {
   "name": "Cortana",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "ignore": [
     "**/.*",
-    "./gulpfile.js",
-    "./assets",
-    "./package.js"
+    "gulpfile.js",
+    "assets",
+    "package.js"
   ],
   "devDependencies": {
     "jquery": "1.11.*",
