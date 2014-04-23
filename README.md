@@ -20,7 +20,7 @@ index: README
 
 We recomand to place a `README.md` in the root of your source directory to build a custom styleguide index page.
 
-To have add a custom category wrapper like in the example, just add it before your category name with `space>space` and before all the other categories in the same wrapper. You will have something like this :
+To have add a **custom category wrapper** like in the example, just add it before your category name with `space>space` and before all the other categories in the same wrapper. You will have something like this :
 
 ```
 /*doc
