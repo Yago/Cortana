@@ -3,9 +3,9 @@
   "version": "1.0.1",
   "ignore": [
     "**/.*",
-    "./gulpfile.js",
-    "./assets",
-    "./package.js"
+    "gulpfile.js",
+    "assets",
+    "package.js"
   ],
   "devDependencies": {
     "jquery": "1.11.*",
