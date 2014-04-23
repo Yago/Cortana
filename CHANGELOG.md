@@ -3,6 +3,9 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes done.
 
+* 1.0.2 (2014-04-23)
+  * yago31 : fix bower ignore
+
 * 1.0.1 (2014-04-23)
   * yago31 : add License and bower ignore
 
