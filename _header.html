@@ -1,3 +1,4 @@
+<% nameScope = ' > ' %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,8 +10,8 @@
     <link rel="stylesheet" href="./build/css/vendors.css">
     <link rel="stylesheet" href="./build/css/cortana.css">
 
-    <!-- Base CSS -->
-    <link rel="stylesheet" href="./build/css/antistatique.css">
+    <!-- Source CSS -->
+    
 </head>
 
   <body class="cortana-body">
@@ -19,7 +20,7 @@
 
       <% catWrappers = Array.new %>
       <% @categories.each do |cat| %>
-        <% catWrapperName = cat[0].split('_').first %>
+        <% catWrapperName = cat[0].split(nameScope).first %>
         <% if not catWrappers.include?(catWrapperName) %>
           <% catWrappers.push(catWrapperName) %>
         <% end %>
@@ -37,8 +38,8 @@
           <h3><%= wrapper %></h3>
           <% @categories.each do |cat| %>
             <% if cat[0].include?(wrapper) %>
-              <% catName = cat[0].split('_').last %>
-              <% if catName == title.split('_').last %>
+              <% catName = cat[0].split(nameScope).last %>
+              <% if catName == title.split(nameScope).last %>
                 <li><a class="active" href="<%= cat[1] %>"><%= catName %></a></li>
               <% else %>
                 <li><a href="<%= cat[1] %>"><%= catName %></a></li>
@@ -51,8 +52,8 @@
     </div>
 
     <header class="cortana-header sb-slide">
-      <% if title.split('_').last %>
-        <h1><%= title.split('_').last %></h1>
+      <% if title.split(nameScope).last %>
+        <h1><%= title.split(nameScope).last %></h1>
       <% elsif file_name.include?('index.html') %>
         <h1>Styleguide home</h1>
       <% end %>
