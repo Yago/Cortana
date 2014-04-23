@@ -1,5 +1,6 @@
 {
   "name": "Cortana",
+  "version": "1.0.0",
   "devDependencies": {
     "jquery": "1.11.*",
     "Slidebars": "~0.9.4",
