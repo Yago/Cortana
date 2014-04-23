@@ -5,7 +5,7 @@
     "**/.*",
     "gulpfile.js",
     "assets",
-    "package.js"
+    "package.json"
   ],
   "devDependencies": {
     "jquery": "1.11.*",
