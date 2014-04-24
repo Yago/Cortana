@@ -71,7 +71,9 @@
         <nav id="cortana-inside-nav" class="cortana-inside-nav">
           <ul>
             <% @blocks.each do |block| %> 
-              <li><a href="#<%= block[:name] %>"><%= block[:title] %></a></li>
+              <% if not block[:parent] %>
+                <li><a href="#<%= block[:name] %>"><%= block[:title] %></a></li>
+              <% end %>
             <% end %>
           </ul>
         </nav>
