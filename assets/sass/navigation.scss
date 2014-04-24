@@ -55,6 +55,7 @@
     background: transparent !important;
     border: none !important;
     transition: all 0.3s !important;
+    font-size: 16px !important;
     &:hover, &.active {
       background: $alizarin !important;
       color: $white !important;
@@ -90,6 +91,7 @@
     text-decoration: none !important;
     font-family: $mainFont !important;
     transition: color 0.3s !important;
+    font-size: 16px !important;
     &:hover, &.active {color: $alizarin !important;}
   }
   li {list-style-type: none  !important;}
