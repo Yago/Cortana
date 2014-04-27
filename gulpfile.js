@@ -48,9 +48,11 @@ gulp.task('scripts', function() {
 // JS vendors concat and minify
 gulp.task('js_vendors', function() {
   gulp.src([
-      './vendors/jquery/dist/jquery.js',
+      './vendors/jquery/jquery.js',
       './vendors/Slidebars/distribution/0.9.4/slidebars.min.js',
-      './vendors/sticky-kit/jquery.sticky-kit.js'
+      './vendors/sticky-kit/jquery.sticky-kit.js',
+      './vendors/hogan/web/builds/2.0.0/hogan-2.0.0.js',
+      './vendors/typeahead.js/dist/typeahead.js'
     ])
     .pipe(concat('vendors.min.js'))
     .pipe(uglify())
