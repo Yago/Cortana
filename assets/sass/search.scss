@@ -34,6 +34,11 @@
   &:first-child {border: none !important;}
 }
 
+.cortana-header .tt-suggestion a {
+  text-decoration: none !important;
+  color: $mine !important;
+}
+
 .cortana-search-title {
   font-weight: bold !important;
   font-size: 14px !important;
@@ -48,6 +53,6 @@
 }
 
 .cortana-header .tt-suggestion.tt-is-under-cursor {
-  color: $white !important;
+  a {color: $white !important;}
   background-color: $alizarin !important;
 }
