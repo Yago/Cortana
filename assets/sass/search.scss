@@ -1,94 +1,53 @@
-.container {
-  max-width:500px;
-  margin-top:15px;
-  margin-left:10px;
-
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  line-height: 1.2;
-  color: #333;
+.twitter-typeahead {
+  position: absolute !important;
+  right: 25px !important;
+  top: 18px !important;
+  width: 200px;
+  display: block !important;
+  input {
+    width: 100% !important;
+    height: 30px !important;
+    box-sizing: border-box !important;
+    border-radius: 3px !important;
+    border: 1px solid $white !important;
+    box-shadow: none !important;
+    padding: 5px 10px !important;
+  }
 }
 
 /* custom styles for the typeahead */
 
-.tt-dropdown-menu {
-  text-align: left;
+.cortana-header .tt-dropdown-menu {
+  width: 200px !important;
+  margin-top: 12px !important;
+  padding: 8px 0 !important;
+  background-color: $white !important;
+  border: none !important;
+  border-radius: 3px !important;
+  box-shadow: 0 5px 10px rgba(0,0,0,.2) !important;
 }
 
-.typeahead,
-.tt-query,
-.tt-hint {
-  width: 396px;
-  height: 30px;
-  padding: 8px 12px;
-  font-size: 24px;
-  line-height: 30px;
-  border: 2px solid #ccc;
-  -webkit-border-radius: 8px;
-     -moz-border-radius: 8px;
-          border-radius: 8px;
-  outline: none;
+.cortana-header .tt-suggestion {
+  padding: 8px 15px !important;
+  font-family: $mainFont !important;
+  border-top: 1px solid $silver !important;
+  &:first-child {border: none !important;}
 }
 
-.typeahead {
-  background-color: #fff;
+.cortana-search-title {
+  font-weight: bold !important;
+  font-size: 14px !important;
+  margin: 0 !important;
+  margin-bottom: 5px !important;
 }
 
-.typeahead:focus {
-  border: 2px solid #0097cf;
+.cortana-search-path {
+  font-weight: normal !important;
+  font-size: 12px !important;
+  margin: 0 !important;
 }
 
-.tt-query {
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-}
-
-.tt-hint {
-  color: #999
-}
-
-.tt-dropdown-menu {
-  width: 422px;
-  margin-top: 12px;
-  padding: 8px 0;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  -webkit-border-radius: 8px;
-     -moz-border-radius: 8px;
-          border-radius: 8px;
-  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
-     -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
-          box-shadow: 0 5px 10px rgba(0,0,0,.2);
-}
-
-.tt-suggestion {
-  padding: 3px 20px;
-  font-size: 18px;
-  line-height: 24px;
-}
-
-.tt-suggestion.tt-is-under-cursor {
-  color: #fff;
-  background-color: #0097cf;
-
-}
-
-.tt-suggestion p {
-  margin: 0;
-}
-
-/* styles for dropdown list: custom template */
-.repo-language {
-  float: right;
-  font-style: italic;
-}
-
-.repo-name {
-  font-weight: bold;
-}
-
-.repo-description {
-  font-size: 14px;
+.cortana-header .tt-suggestion.tt-is-under-cursor {
+  color: $white !important;
+  background-color: $alizarin !important;
 }

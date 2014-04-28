@@ -7,11 +7,11 @@
   <script>
     $(function(){
       $('#cortana-search').typeahead({
-        name: 'twitter-test3',
+        name: 'cortana1',
         prefetch: './doc_data.json',
         template: [
-          '<p class="repo-language">{{title}}</p>',
-          '<p class="repo-name">cool</p>',
+          '<p class="cortana-search-title">{{title}}</p>',
+          '<p class="cortana-search-path">{{breadcrumb}}</p>',
         ].join(''),
         engine: Hogan
       });
