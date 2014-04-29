@@ -51,8 +51,9 @@
   padding: 50px 4% !important;
   border: 1px solid $softBlue !important;
   position: relative !important;
-  width: 92% !important;
+  width: 100% !important;
   overflow-y: auto !important;
+  box-sizing: border-box !important;
   &:after {
     content: 'Example' !important;
     position: absolute !important;

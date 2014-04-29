@@ -9,6 +9,7 @@
   word-break: keep-all !important;
   word-wrap: normal !important;
   white-space:pre !important;
+  color: $mine !important;
 }
 
 .codeBlock {
@@ -53,6 +54,9 @@
     font-size: 14px !important;
     position: relative !important;
     line-height: 1.6em !important;
+    color: $white !important;
+    border: 1px solid  #1e221d !important;
+    overflow: visible !important;
   }
   @media only screen and (max-width: 900px) {padding: 50px 10px !important;}
 }

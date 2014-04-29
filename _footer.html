@@ -4,5 +4,26 @@
 
   <script src="build/js/vendors.min.js"></script>
   <script src="build/js/main.js"></script>
+  <script>
+    $(function(){
+      $('#cortana-search').typeahead({
+        name: 'cortana2',
+        prefetch: './doc_data.json',
+        template: [
+          '<a href="{{path}}">',
+          '<p class="cortana-search-title">{{title}}</p>',
+          '<p class="cortana-search-path">{{breadcrumb}}</p>',
+          '</a>'
+        ].join(''),
+        updater: function () {
+          /* navigate to the selected item */
+          alert('ok');
+        },
+        engine: Hogan
+      }).on('typeahead:selected', function(event, data) {
+        window.location.replace(data.path);
+      });
+    });
+  </script>
 </body>
 </html>
