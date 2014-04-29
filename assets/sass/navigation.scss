@@ -7,7 +7,7 @@
   top: 20px !important;
   &:hover {
     cursor: pointer !important;
-    span {background: $white !important;}
+    span {background: $mine !important;}
   }
   span {
     display: block !important;
@@ -15,7 +15,7 @@
     height: 4px !important;
     border-radius: 1px !important;
     margin: 5px 0 !important;
-    background: $clouds !important;
+    background: $concrete !important;
   }
   @media only screen and (max-width: 767px) {
     top: 12px !important;
@@ -23,11 +23,12 @@
 }
 
 .cortana-sidenav {
-  background: $white !important;
+  background: $night !important;
 }
 
 .cortana-nav {
   padding: 10px 0 !important;
+  padding-top: 20px !important;
   margin: 0 !important;
   ul {
     padding: 0 !important;
@@ -47,7 +48,7 @@
     padding: 3px 5% !important;
     text-decoration: none !important;
     font-family: $mainFont !important;
-    color: $alizarin !important;
+    color: $clouds !important;
     margin: 0 !important;
     font-style: normal !important;
     font-weight: normal !important;
@@ -57,9 +58,17 @@
     transition: all 0.3s !important;
     font-size: 16px !important;
     box-sizing: border-box !important;
-    &:hover, &.active {
+    &:hover {
+      background: transparent !important;
+      color: $alizarin !important;
+      font-size: 16px !important;
+      text-decoration: none !important;
+    }
+    &.active {
       background: $alizarin !important;
       color: $white !important;
+      font-size: 16px !important;
+      text-decoration: none !important;
     }
   }
   h3 {
@@ -67,8 +76,9 @@
     margin: 20px 0 10px 0 !important;
     padding-top: 20px !important;
     font-family: $mainFont !important;
-    border-top: 1px solid $silver !important;
-    font-size: 16px !important;
+    color: $clouds !important;
+    border-top: 1px solid lighten($night, 15%) !important;
+    font-size: 18px !important;
     font-weight: bold !important;
     &:first-child {border: none;}
   }

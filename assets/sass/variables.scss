@@ -24,8 +24,8 @@ $asbestos:         #7F8C8D;
 $white:            #fff;
 $black:            #000;
 $mine:             #333;
-$night:            saturate(darken($midnightBlue, 13%), 50%);
-$softBlue:         lighten($wetAsphalt, 66%);
+$night:            desaturate(darken($midnightBlue, 13%), 10%);
+$softBlue:         lighten($wetAsphalt, 68%);
 
 // Cortana FONTS
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic);

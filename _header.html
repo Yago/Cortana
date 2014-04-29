@@ -36,6 +36,7 @@
         </ul>
         <% catWrappers.each do |wrapper| %>
           <h3><%= wrapper %></h3>
+          <ul>
           <% @categories.each do |cat| %>
             <% if cat[0].include?(wrapper) %>
               <% catName = cat[0].split(nameScope).last %>
