@@ -93,6 +93,7 @@
     font-family: $mainFont !important;
     transition: color 0.3s !important;
     font-size: 16px !important;
+    background: transparent !important;
     &:hover, &.active {color: $alizarin !important;}
   }
   li {
@@ -101,6 +102,7 @@
   }
   ul {
     position: relative  !important;
+    padding: 0 !important;
     top: -100px  !important;
     margin-top: 100px  !important;
   }
