@@ -95,7 +95,10 @@
     font-size: 16px !important;
     &:hover, &.active {color: $alizarin !important;}
   }
-  li {list-style-type: none  !important;}
+  li {
+    list-style-type: none  !important;
+    display: block !important;
+  }
   ul {
     position: relative  !important;
     top: -100px  !important;
