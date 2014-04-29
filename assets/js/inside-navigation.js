@@ -42,5 +42,5 @@
       }, 800);
     });
   });
-}) (jQuery);
+}) (jQuery_no_conflict);
 /*global  jQuery */
