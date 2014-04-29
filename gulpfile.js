@@ -61,7 +61,8 @@ gulp.task('js_vendors', function() {
 
 gulp.task('browser-sync', function() {
     browserSync.init(['../docs/build/css/*.css', '../docs/*.html', '../docs/build/js/*.js'], {
-      proxy: 'localhost'
+      proxy: 'localhost',
+      open: false
     });
 });
 
