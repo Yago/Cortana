@@ -1,3 +1,13 @@
+/* ==========================================================
+ * template-helper.js
+ * Add the missing class to doc content
+ *
+ * Author: Yann Gouffon, hello@yago.io
+ *
+ * Copyright 2014 Yann Gouffon
+ * Licensed under MIT
+ ========================================================== */
+
 (function($) {
   $(document).ready(function() {
     // Add wrapper to all styleguide content

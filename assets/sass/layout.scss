@@ -1,5 +1,16 @@
+/* ==========================================================
+ * layout.scss
+ * Global layout styles
+ *
+ * Author: Yann Gouffon, hello@yago.io
+ *
+ * Copyright 2014 Yann Gouffon
+ * Licensed under MIT
+ ========================================================== */
+
 .cortana-body, #sb-site {
   background: $softBlue !important;
+  z-index: auto !important;
 }
 
 .cortana-header {

@@ -1,3 +1,13 @@
+/* ==========================================================
+ * inside-navigation.js
+ * Inside nav script to keep it fixed depend of the scroll position
+ *
+ * Author: Yann Gouffon, hello@yago.io
+ *
+ * Copyright 2014 Yann Gouffon
+ * Licensed under MIT
+ ========================================================== */
+
 (function($) {
   $(document).ready(function() {
     // Init stick inside nav
