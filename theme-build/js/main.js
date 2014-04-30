@@ -46,7 +46,7 @@
 /*global  jQuery */
 
 (function($) {
-  $(document).ready(function() {
+  $(window).load(function() {
     var cortanaSlidebars = new $.slidebars();
     // $(window).load(function () {
     //   cortanaSlidebars.open('left');
