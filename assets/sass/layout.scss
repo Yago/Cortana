@@ -40,7 +40,7 @@
 .cortana-container {
   max-width: 900px !important;
   margin: 0 auto !important;
-  padding-bottom: 90px !important;
+  padding-bottom: 30px !important;
   border: 1px solid $softBlue !important;
   @media only screen and (max-width: 900px) {
     padding: 0 10px 50px 10px !important;
@@ -78,5 +78,17 @@
     padding: 5px 8px !important;
     display: inline-block !important;
     font-family: $mainFont !important;
+  }
+}
+
+.cortana-footer {
+  font-family: $mainFont !important;
+  text-align: center !important;
+  padding-bottom: 50px !important;
+  font-size: 14px !important;
+  color: $asbestos !important;
+  a {
+    color: $asbestos !important;
+    &:hover {color: $alizarin !important;}
   }
 }
