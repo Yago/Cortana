@@ -16,6 +16,7 @@
     border-radius: 1px !important;
     margin: 5px 0 !important;
     background: $concrete !important;
+    transition: background 0.3s !important;
   }
   @media only screen and (max-width: 767px) {
     top: 12px !important;
