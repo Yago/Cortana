@@ -33,5 +33,9 @@
       });
     }) (jQuery_no_conflict);
   </script>
+  
+  <% @config['js_include'].each do |js| %>
+    <script type="text/javascript" src="<%= js %>"></script>
+  <% end %>
 </body>
 </html>

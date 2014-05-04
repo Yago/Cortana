@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="./theme-build/css/cortana.css">
 
     <!-- Source CSS -->
-
+    <% @config['css_include'].each do |css| %>
+      <link rel="stylesheet" href="<%= css %>">
+    <% end %>
 
     <!--[if lt IE 9]>
       <script src="theme-build/polyfill/html5shiv.js"></script>
