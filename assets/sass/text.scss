@@ -9,7 +9,7 @@
  ========================================================== */
 
 .cortana-content {
-  font-size: 15px !important;
+  font-size: 18px !important;
   line-height: 1.6em !important;
   h1, h2, h3, h4, h5, h6{
     font-family: $mainFont !important;
@@ -39,7 +39,17 @@
     line-height: 1.6em !important;
     padding: 0 4% !important;
     margin: 1.8em 0 !important;
+    font-size: 18px !important;
     @media only screen and (max-width: 900px) {padding: 0 10px !important;}
+  }
+  blockquote, q {
+    margin: 30px 4% !important;
+    border-left: 3px solid $silver !important;
+    font-size: 18px !important;
+    p {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
   }
   table {
     margin: 30px 4% !important;
@@ -68,7 +78,7 @@
     font-weight: normal !important;
     color: $mine !important;
     font-style: normal !important;
-    font-size: 15px !important;
+    font-size: 18px !important;
     background: $white !important;
     transition: color 0.3s !important;
     &:hover, &:active, &:focus {
@@ -76,7 +86,7 @@
       font-weight: normal !important;
       color: $alizarin !important;
       font-style: normal !important;
-      font-size: 15px !important;
+      font-size: 18px !important;
       background: $white !important;
     }
   }
