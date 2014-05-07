@@ -1,4 +1,4 @@
-<% nameScope = ' > ' %>
+<% nameScope = @config['name_scope'] %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,10 +7,18 @@
     <title><%= title %></title>
 
     <!-- Styleguide CSS -->
-    <link rel="stylesheet" href="./build/css/vendors.css">
-    <link rel="stylesheet" href="./build/css/cortana.css">
+    <link rel="stylesheet" href="./theme-build/css/vendors.css">
+    <link rel="stylesheet" href="./theme-build/css/cortana.css">
 
     <!-- Source CSS -->
+    <% @config['css_include'].each do |css| %>
+      <link rel="stylesheet" href="<%= css %>">
+    <% end %>
+
+    <!--[if lt IE 9]>
+      <script src="theme-build/polyfill/html5shiv.js"></script>
+      <script src="theme-build/polyfill/respond.min.js"></script>
+    <![endif]-->
     
 </head>
 
@@ -36,6 +44,7 @@
         </ul>
         <% catWrappers.each do |wrapper| %>
           <h3><%= wrapper %></h3>
+          <ul>
           <% @categories.each do |cat| %>
             <% if cat[0].include?(wrapper) %>
               <% catName = cat[0].split(nameScope).last %>
@@ -62,6 +71,7 @@
         <span></span>
         <span></span>
       </div>
+      <input id="cortana-search" class="cortana-search" type="text" placeholder="Search">
     </header>
 
     <div id="sb-site">
@@ -71,11 +81,15 @@
         <nav id="cortana-inside-nav" class="cortana-inside-nav">
           <ul>
             <% @blocks.each do |block| %> 
-              <li><a href="#<%= block[:name] %>"><%= block[:title] %></a></li>
+              <% if not block[:parent] %>
+                <li><a href="#<%= block[:name] %>"><%= block[:title] %></a></li>
+              <% end %>
             <% end %>
           </ul>
         </nav>
 
         <div class="cortana-content-wrapper">
+          
+
 
 

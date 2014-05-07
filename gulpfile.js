@@ -20,7 +20,7 @@ gulp.task('styles', function() {
     .on('error', notify.onError("Error: <%= error.message %>"))
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
     .pipe(minifycss())
-    .pipe(gulp.dest('./build/css'));
+    .pipe(gulp.dest('./theme-build/css'));
 });
 
 // CSS vendors concat and minify
@@ -30,7 +30,7 @@ gulp.task('css_vendors', function() {
     ])
     .pipe(concat('vendors.css'))
     .pipe(minifycss())
-    .pipe(gulp.dest('./build/css'))
+    .pipe(gulp.dest('./theme-build/css'))
 });
 
 // JS task
@@ -39,27 +39,30 @@ gulp.task('scripts', function() {
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'))
     .pipe(concat('main.js'))
-    .pipe(gulp.dest('./build/js'))
+    .pipe(gulp.dest('./theme-build/js'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(uglify())
-    .pipe(gulp.dest('./build/js'));
+    .pipe(gulp.dest('./theme-build/js'));
 });
 
 // JS vendors concat and minify
 gulp.task('js_vendors', function() {
   gulp.src([
-      './vendors/jquery/dist/jquery.js',
+      './vendors/jquery/jquery.js',
       './vendors/Slidebars/distribution/0.9.4/slidebars.min.js',
-      './vendors/sticky-kit/jquery.sticky-kit.js'
+      './vendors/sticky-kit/jquery.sticky-kit.js',
+      './vendors/hogan/web/builds/2.0.0/hogan-2.0.0.js',
+      './vendors/typeahead.js/dist/typeahead.js'
     ])
     .pipe(concat('vendors.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('./build/js'));
+    .pipe(gulp.dest('./theme-build/js'));
 });
 
 gulp.task('browser-sync', function() {
     browserSync.init(['../docs/build/css/*.css', '../docs/*.html', '../docs/build/js/*.js'], {
-      proxy: 'localhost'
+      proxy: 'localhost',
+      open: false
     });
 });
 
