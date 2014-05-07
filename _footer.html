@@ -14,10 +14,28 @@
   </script>
   <script src="theme-build/js/main.js"></script>
   <script>
+    var searchData = 
+    <%= "[" %>
+      <% @pages.each do |file_name, page| %>
+        <% if not page[:blocks].empty? %>
+          <% page[:blocks].each do |block| %>
+            <% file_path = block[:category].to_s.gsub(' ', '_').downcase + '.html' %>
+            <% file_id = "#"+block[:name].to_s %>
+            <%= "{" %>
+            <%= "\"title\": \""+block[:title].to_s+"\"," %>
+            <%= "\"breadcrumb\": \""+block[:category].to_s+" > "+block[:title]+"\"," %>
+            <%= "\"path\": \""+file_path+file_id+"\"," %>
+            <%= "\"tokens\": [\""+block[:category].to_s+"\",\""+block[:title].to_s+"\"]" %>
+            <%= "}," %>
+          <% end %>
+        <% end %>
+      <% end %>
+    <%= "{}]" %>;
+
     (function($) {
       $('#cortana-search').typeahead({
-        name: 'cortana2',
-        prefetch: './doc_data.json',
+        name: 'cortana_search',
+        local: searchData,
         template: [
           '<a href="{{path}}">',
           '<p class="cortana-search-title">{{title}}</p>',
