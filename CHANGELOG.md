@@ -3,6 +3,13 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes done.
 
+* 1.1.0 (2014-04-23)
+  * yago31 : fix many bootstrap conflict with theme
+  * yago31 : enhance theme with a complete color scheme change
+  * yago31 : add search feature
+  * yago31 : add css/js to include in the hologra_config.yml
+  * yago31 : add scope_name option
+
 * 1.0.2 (2014-04-23)
   * yago31 : fix bower ignore
 
