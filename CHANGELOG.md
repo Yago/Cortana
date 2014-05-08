@@ -3,7 +3,11 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes done.
 
-* 1.1.0 (2014-04-23)
+* 1.1.1 (2014-05-08)
+  * yago31 : Update how to install hologram in the README
+  * yago31 : fix few little css things
+
+* 1.1.0 (2014-05-07)
   * yago31 : fix many bootstrap conflict with theme
   * yago31 : enhance theme with a complete color scheme change
   * yago31 : add search feature
