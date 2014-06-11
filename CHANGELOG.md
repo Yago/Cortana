@@ -3,7 +3,7 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes done.
 
-* 1.1.1 (2014-06-11)
+* 1.1.2 & 1.1.3(2014-06-11)
   * yago31 : Fix search with the last Hologram update
 
 * 1.1.1 (2014-05-08)
