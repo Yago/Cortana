@@ -14,13 +14,4 @@
   app.controller('MainController', function($scope) {
   });
 
-  app.controller('SearchController', function($scope) {
-
-    $scope.selectedIcon = 'asdasd';
-    $scope.icons = [
-      {value: 'Gear', label: 'Gear'},
-      {value: 'Globe', label: '<a href="#"><p class="cortana-search-title">Globe</p></a>'}
-    ];
-
-  });
 })();

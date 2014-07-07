@@ -79,8 +79,8 @@
 
       <div class="cortana-container">
 
-        <nav id="cortana-inside-nav" class="cortana-inside-nav">
-          <ul>
+        <nav id="cortana-inside-nav" class="cortana-inside-nav" bs-affix>
+          <ul bs-scrollspy-list>
             <% @blocks.each do |block| %> 
               <% if not block[:parent] %>
                 <li><a href="#<%= block[:name] %>"><%= block[:title] %></a></li>

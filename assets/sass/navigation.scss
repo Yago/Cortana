@@ -112,20 +112,20 @@
     padding: 5px 0 !important;
     text-decoration: none !important;
     font-family: $mainFont !important;
-    transition: color 0.3s !important;
+    transition: color 0.2s !important;
     font-size: 16px !important;
     background: transparent !important;
-    &:hover, &.active, &:focus {
-      color: $alizarin !important;
-      font-size: 16px !important;
-      background: transparent !important;
-      text-decoration: none !important;
-    }
   }
   li {
     list-style-type: none  !important;
     display: block !important;
     margin: 0 !important;
+    &.active a, a:hover, a:focus {
+      color: $alizarin !important;
+      font-size: 16px !important;
+      background: transparent !important;
+      text-decoration: none !important;
+    }
   }
   ul {
     position: relative  !important;
