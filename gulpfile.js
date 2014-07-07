@@ -60,7 +60,7 @@ gulp.task('js_vendors', function() {
 });
 
 gulp.task('browser-sync', function() {
-    browserSync.init(['../docs/build/css/*.css', '../docs/*.html', '../docs/build/js/*.js'], {
+    browserSync.init(['theme-build/css/*.css', '*.html', 'theme-build/js/*.js'], {
       proxy: 'localhost',
       open: false
     });
