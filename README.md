@@ -8,10 +8,7 @@ Check the [Demo](http://yago31.github.io/Cortana-example)
 To install the last version of **Hologram** (required) :
 
 ````
-$ git clone git@github.com:trulia/hologram.git
-$ cd hologram/
-$ gem build hologram.gemspec
-$ gem install hologram-1.0.1.gem
+$ gem install hologram
 ````
 
 
@@ -33,6 +30,7 @@ destination: ./styleguide
 
 # Hologram theme
 documentation_assets: ./bower_components/Cortana
+custom_markdown: ./bower_components/Cortana/CortanaMarkdownRenderer.rb
 
 # To have a custom index page build with your README.md
 index: README
@@ -48,19 +46,19 @@ js_include:
   - '../assets/js/main.js'
 
 # String who is used to split the category name and create category wrapper
-name_scope: ' > '
+name_scope: ' - '
 ````
 
 We recomand to place a `README.md` in the root of your source directory to build a custom styleguide index page.
 
-To have add a **custom category wrapper** like in the example, just add it before your category name with `space>space` and before all the other categories in the same wrapper. This `name_scope` can be change in the `hologram_config.yml`. You will have something like this :
+To have add a **custom category wrapper** like in the example, just add it before your category name with `space-space` and before all the other categories in the same wrapper. This `name_scope` can be change in the `hologram_config.yml`. You will have something like this :
 
 ````
 /*doc
 ---
 title: My Title
 name: myname
-category: General > Button
+category: General - Button
 ---
 
 Some Markdown comment and markup...
@@ -85,8 +83,8 @@ $ gulp
 
 ##Dependencies
 * [jQuery](https://github.com/jquery/jquery)
+* [Angular.js](https://github.com/angular/angular.js), by Google
+* [Angular-Strap](https://github.com/mgcrea/angular-strap), by Mgcrea
+* [AngularUI Bootstrap](https://github.com/angular-ui/bootstrap), by AngularUI
 * [Slidebars](https://github.com/adchsm/Slidebars), by adchsm
-* [Sticky-kit](https://github.com/leafo/sticky-kit), by leafo
-* [Typeahead.js](https://github.com/twitter/typeahead.js), by twitter
-* [Hogan](https://github.com/twitter/hogan.js), by twitter
 
