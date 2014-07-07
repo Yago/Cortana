@@ -51,7 +51,8 @@ gulp.task('js_vendors', function() {
       'vendors/jquery/jquery.js',
       'vendors/Slidebars/distribution/0.9.4/slidebars.min.js',
       'vendors/angular/angular.js',
-      'vendors/angular-strap/dist/angular-strap.min.js'
+      'vendors/angular-strap/dist/angular-strap.min.js',
+      'vendors/angular-strap/dist/angular-strap.tpl.min.js'
     ])
     .pipe(concat('vendors.min.js'))
     .pipe(uglify())

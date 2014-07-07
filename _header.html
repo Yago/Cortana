@@ -1,6 +1,6 @@
 <% nameScope = @config['name_scope'] %>
 <!DOCTYPE html>
-<html>
+<html ng-app="cortana">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -70,7 +70,9 @@
         <span></span>
         <span></span>
       </div>
-      <input id="cortana-search" class="cortana-search" type="text" placeholder="Search">
+      <div append-source ng-controller="cortana-search">
+        <input id="cortana-search" type="text" class="form-control cortana-search" ng-model="selectedIcon" data-min-length="0" data-html="1" data-animation="am-flip-x" ng-options="icon as icon.label for icon in icons" placeholder="Search" bs-typeahead>
+      </div>
     </header>
 
     <div id="sb-site">

@@ -11,6 +11,7 @@
     "jquery": "1.10.*",
     "Slidebars": "~0.9.4",
     "angular": "1.2.*",
-    "angular-strap": "2.0.*"
+    "angular-strap": "2.0.*",
+    "angular-motion": "0.3.*"
   }
 }
