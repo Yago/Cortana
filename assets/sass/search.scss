@@ -44,7 +44,7 @@
 
 /* custom styles for the typeahead */
 
-.typeahead {
+.cortana-search-wrapper .dropdown-menu {
   width: 230px !important;
   margin-top: 12px !important;
   padding: 8px 0 !important;
@@ -54,19 +54,19 @@
   box-shadow: 0 5px 10px rgba(0,0,0,.2) !important;
 }
 
-.typeahead .ng-scope {
+.cortana-search-wrapper li {
   padding: 8px 15px !important;
   font-family: $mainFont !important;
   border-top: 1px solid $silver !important;
   &:first-child {border: none !important;}
 }
 
-.typeahead .ng-scope a {
+.cortana-search-wrapper li a {
   text-decoration: none !important;
   color: $mine !important;
 }
 
-.typeahead .ng-scope.active {
+.cortana-search-wrapper li.active {
   a {color: $white !important;}
   background-color: $alizarin !important;
 }
@@ -82,4 +82,16 @@
   font-weight: normal !important;
   font-size: 12px !important;
   margin: 0 !important;
+  word-wrap: break-word !important;
+  white-space: normal !important;
+}
+
+.dropdown-menu li a,
+.dropdown-menu li a:hover,
+.dropdown-menu li a:focus,
+.dropdown-menu .active a,
+.dropdown-menu .active a:hover,
+.dropdown-menu .active a:focus {
+  padding: 0 !important;
+  background: transparent !important;
 }

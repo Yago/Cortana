@@ -31,6 +31,9 @@
           <% end %>
         <% end %>
       <%= "{}]" %>;
+      $scope.onSelect = function ($item, $model, $label) {
+        window.location.replace($item.path);
+      };
     }
   </script>
   <script type="text/ng-template" id="customTemplate.html">

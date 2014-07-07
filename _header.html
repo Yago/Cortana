@@ -70,8 +70,8 @@
         <span></span>
         <span></span>
       </div>
-      <div ng-controller="TypeaheadCtrl">
-        <input id="cortana-search" type="text" class="form-control cortana-search" ng-model="customSelected" placeholder="Custom template" typeahead="state as state.title for state in searchData | filter:{title:$viewValue}" typeahead-template-url="customTemplate.html" class="form-control">
+      <div class="cortana-search-wrapper" ng-controller="TypeaheadCtrl">
+        <input id="cortana-search" type="text" class="form-control cortana-search" ng-model="customSelected" placeholder="Search" typeahead="data as data.title for data in searchData | filter:{title:$viewValue}" typeahead-template-url="customTemplate.html" class="form-control" typeahead-on-select="onSelect($item, $model, $label)">
       </div>
     </header>
 
