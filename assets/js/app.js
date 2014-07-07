@@ -1,6 +1,6 @@
 /* ==========================================================
  * app.js
- * Angular scripts
+ * Angular app
  *
  * Author: Yann Gouffon, hello@yago.io
  *
