@@ -10,8 +10,7 @@
   "devDependencies": {
     "jquery": "1.10.*",
     "Slidebars": "~0.9.4",
-    "sticky-kit": "~1.0.4",
-    "typeahead.js": "~0.9.3",
-    "hogan": "~3.0.0"
+    "angular": "1.2.*",
+    "angular-strap": "2.0.*"
   }
 }

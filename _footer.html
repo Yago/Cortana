@@ -10,50 +10,26 @@
   <script src="theme-build/js/vendors.min.js"></script>
   <script type="text/javascript">
       // avoid conflict with potential other jQuery loaded on the styleguide
-      var jQuery_no_conflict = $.noConflict(true);
+      var jQuery_no_conflict = $.noConflict(true),
+          searchData = 
+          <%= "[" %>
+            <% @pages.each do |file_name, page| %>
+              <% if not page[:blocks].empty? %>
+                <% page[:blocks].each do |block| %>
+                  <% file_path = block[:categories][0].to_s.gsub(' ', '_').downcase + '.html' %>
+                  <% file_id = "#"+block[:name].to_s %>
+                  <%= "{" %>
+                  <%= "\"title\": \""+block[:title].to_s+"\"," %>
+                  <%= "\"breadcrumb\": \""+block[:categories][0].to_s+" > "+block[:title]+"\"," %>
+                  <%= "\"path\": \""+file_path+file_id+"\"," %>
+                  <%= "\"tokens\": [\""+block[:categories][0].to_s+"\",\""+block[:title].to_s+"\"]" %>
+                  <%= "}," %>
+                <% end %>
+              <% end %>
+            <% end %>
+          <%= "{}]" %>;
   </script>
-  <script src="theme-build/js/main.js"></script>
-  <script>
-    var searchData = 
-    <%= "[" %>
-      <% @pages.each do |file_name, page| %>
-        <% if not page[:blocks].empty? %>
-          <% page[:blocks].each do |block| %>
-            <% file_path = block[:categories][0].to_s.gsub(' ', '_').downcase + '.html' %>
-            <% file_id = "#"+block[:name].to_s %>
-            <%= "{" %>
-            <%= "\"title\": \""+block[:title].to_s+"\"," %>
-            <%= "\"breadcrumb\": \""+block[:categories][0].to_s+" > "+block[:title]+"\"," %>
-            <%= "\"path\": \""+file_path+file_id+"\"," %>
-            <%= "\"tokens\": [\""+block[:categories][0].to_s+"\",\""+block[:title].to_s+"\"]" %>
-            <%= "}," %>
-          <% end %>
-        <% end %>
-      <% end %>
-    <%= "{}]" %>;
-
-    (function($) {
-      $('#cortana-search').typeahead({
-        name: 'cortana_search',
-        local: searchData,
-        template: [
-          '<a href="{{path}}">',
-          '<p class="cortana-search-title">{{title}}</p>',
-          '<p class="cortana-search-path">{{breadcrumb}}</p>',
-          '</a>'
-        ].join(''),
-        updater: function () {
-          /* navigate to the selected item */
-          alert('ok');
-        },
-        engine: Hogan
-      }).on('typeahead:selected', function(event, data) {
-        window.location.replace(data.path);
-      });
-    }) (jQuery_no_conflict);
-  </script>
-  
-  <% @config['js_include'].each do |js| %>
+  <script src="theme-build/js/main.js"></script>  <% @config['js_include'].each do |js| %>
     <script type="text/javascript" src="<%= js %>"></script>
   <% end %>
 </body>
