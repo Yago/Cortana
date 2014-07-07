@@ -21,7 +21,7 @@
     <![endif]-->
 </head>
 
-  <body class="cortana-body">
+  <body class="cortana-body"  ng-controller="MainController">
 
     <div class="sb-slidebar sb-left cortana-sidenav sb-style-push">
 
@@ -70,8 +70,8 @@
         <span></span>
         <span></span>
       </div>
-      <div append-source ng-controller="cortana-search">
-        <input id="cortana-search" type="text" class="form-control cortana-search" ng-model="selectedIcon" data-min-length="0" data-html="1" data-animation="am-flip-x" ng-options="icon as icon.label for icon in icons" placeholder="Search" bs-typeahead>
+      <div ng-controller="TypeaheadCtrl">
+        <input id="cortana-search" type="text" class="form-control cortana-search" ng-model="customSelected" placeholder="Custom template" typeahead="state as state.title for state in searchData | filter:{title:$viewValue}" typeahead-template-url="customTemplate.html" class="form-control">
       </div>
     </header>
 

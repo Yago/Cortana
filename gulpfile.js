@@ -26,7 +26,8 @@ gulp.task('styles', function() {
 // CSS vendors concat and minify
 gulp.task('css_vendors', function() {
   gulp.src([
-      'vendors/Slidebars/distribution/0.9.4/slidebars.css'
+      'vendors/Slidebars/distribution/0.9.4/slidebars.css',
+      'vendors/angular-motion/dist/angular-motion.css'
     ])
     .pipe(concat('vendors.css'))
     .pipe(minifycss())
@@ -51,8 +52,11 @@ gulp.task('js_vendors', function() {
       'vendors/jquery/jquery.js',
       'vendors/Slidebars/distribution/0.9.4/slidebars.min.js',
       'vendors/angular/angular.js',
+      'vendors/angular-animate/angular-animate.js',
       'vendors/angular-strap/dist/angular-strap.min.js',
-      'vendors/angular-strap/dist/angular-strap.tpl.min.js'
+      'vendors/angular-strap/dist/angular-strap.tpl.min.js',
+      'vendors/angular-bootstrap/ui-bootstrap.js',
+      'vendors/angular-bootstrap/ui-bootstrap-tpls.js'
     ])
     .pipe(concat('vendors.min.js'))
     .pipe(uglify())

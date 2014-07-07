@@ -9,29 +9,18 @@
  ========================================================== */
 
 (function(){
-  var app = angular.module('cortana', ['mgcrea.ngStrap.typeahead', 'mgcrea.ngStrap.scrollspy', 'mgcrea.ngStrap.affix']);
+  var app = angular.module('cortana', ['mgcrea.ngStrap', 'ui.bootstrap']);
 
-  app.controller('MainCtrl', function($scope) {
+  app.controller('MainController', function($scope) {
   });
 
-  'use strict';
+  app.controller('SearchController', function($scope) {
 
-  app.controller('cortana-search', function($scope, $templateCache, $http) {
-
-    $scope.selectedIcon = '';
+    $scope.selectedIcon = 'asdasd';
     $scope.icons = [
-      {value: 'Gear', label: '<a href="#"><p class="cortana-search-title">Gear</p></a>'},
+      {value: 'Gear', label: 'Gear'},
       {value: 'Globe', label: '<a href="#"><p class="cortana-search-title">Globe</p></a>'}
     ];
-
-    $scope.selectedAddress = '';
-    $scope.getAddress = function(viewValue) {
-      var params = {address: viewValue, sensor: false};
-      return $http.get('http://maps.googleapis.com/maps/api/geocode/json', {params: params})
-      .then(function(res) {
-        return res.data.results;
-      });
-    };
 
   });
 })();

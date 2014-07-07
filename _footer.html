@@ -13,23 +13,31 @@
   </script>
   <script src="theme-build/js/main.js"></script>
   <script type="text/javascript">
-    var  searchData = 
-    <%= "[" %>
-      <% @pages.each do |file_name, page| %>
-        <% if not page[:blocks].empty? %>
-          <% page[:blocks].each do |block| %>
-            <% file_path = block[:categories][0].to_s.gsub(' ', '_').downcase + '.html' %>
-            <% file_id = "#"+block[:name].to_s %>
-            <%= "{" %>
-            <%= "\"title\": \""+block[:title].to_s+"\"," %>
-            <%= "\"breadcrumb\": \""+block[:categories][0].to_s+" > "+block[:title]+"\"," %>
-            <%= "\"path\": \""+file_path+file_id+"\"," %>
-            <%= "\"tokens\": [\""+block[:categories][0].to_s+"\",\""+block[:title].to_s+"\"]" %>
-            <%= "}," %>
+    function TypeaheadCtrl($scope) {
+      $scope.selected = undefined;
+      $scope.searchData = 
+      <%= "[" %>
+        <% @pages.each do |file_name, page| %>
+          <% if not page[:blocks].empty? %>
+            <% page[:blocks].each do |block| %>
+              <% file_path = block[:categories][0].to_s.gsub(' ', '_').downcase + '.html' %>
+              <% file_id = "#"+block[:name].to_s %>
+              <%= "{" %>
+              <%= "\"title\": \""+block[:title].to_s+"\"," %>
+              <%= "\"breadcrumb\": \""+block[:categories][0].to_s+" > "+block[:title]+"\"," %>
+              <%= "\"path\": \""+file_path+file_id+"\"" %>
+              <%= "}," %>
+            <% end %>
           <% end %>
         <% end %>
-      <% end %>
-    <%= "{}]" %>;
+      <%= "{}]" %>;
+    }
+  </script>
+  <script type="text/ng-template" id="customTemplate.html">
+    <a href="{{match.model.path}}">
+      <p class="cortana-search-title">{{match.model.title}}</p>
+      <p class="cortana-search-path">{{match.model.breadcrumb}}</p>
+    </a>
   </script>
   <% @config['js_include'].each do |js| %>
     <script type="text/javascript" src="<%= js %>"></script>
