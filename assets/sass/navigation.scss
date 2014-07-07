@@ -139,6 +139,8 @@
     margin-top: 0 !important;
     margin-left: 0 !important;
     padding: 0 30px !important;
+    position: relative !important;
+    z-index: 10 !important;
     li {
       display: inline-block !important;
       width: 45% !important;

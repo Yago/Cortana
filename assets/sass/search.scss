@@ -39,7 +39,7 @@
 }
 
 @media only screen and (max-width: 767px) {
-  .cortana-search {display: none;}
+  .cortana-search {display: none !important;}
 }
 
 /* custom styles for the typeahead */
