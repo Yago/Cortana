@@ -1,6 +1,6 @@
 <% nameScope = @config['name_scope'] %>
 <!DOCTYPE html>
-<html>
+<html ng-app="cortana">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -19,10 +19,9 @@
       <script src="theme-build/polyfill/html5shiv.js"></script>
       <script src="theme-build/polyfill/respond.min.js"></script>
     <![endif]-->
-    
 </head>
 
-  <body class="cortana-body">
+  <body class="cortana-body"  ng-controller="MainController">
 
     <div class="sb-slidebar sb-left cortana-sidenav sb-style-push">
 
@@ -71,15 +70,17 @@
         <span></span>
         <span></span>
       </div>
-      <input id="cortana-search" class="cortana-search" type="text" placeholder="Search">
+      <div class="cortana-search-wrapper" ng-controller="TypeaheadCtrl">
+        <input id="cortana-search" type="text" class="form-control cortana-search" ng-model="customSelected" placeholder="Search" typeahead="data as data.title for data in searchData | filter:{title:$viewValue}" typeahead-template-url="customTemplate.html" class="form-control" typeahead-on-select="onSelect($item, $model, $label)">
+      </div>
     </header>
 
     <div id="sb-site">
 
       <div class="cortana-container">
 
-        <nav id="cortana-inside-nav" class="cortana-inside-nav">
-          <ul>
+        <nav id="cortana-inside-nav" class="cortana-inside-nav" bs-affix>
+          <ul bs-scrollspy-list data-offset="-30">
             <% @blocks.each do |block| %> 
               <% if not block[:parent] %>
                 <li><a href="#<%= block[:name] %>"><%= block[:title] %></a></li>
@@ -89,7 +90,7 @@
         </nav>
 
         <div class="cortana-content-wrapper">
-          
+          <div class="cortana-content">
 
 
 
