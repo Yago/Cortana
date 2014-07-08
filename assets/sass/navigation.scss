@@ -91,6 +91,7 @@
     border-top: 1px solid lighten($night, 15%) !important;
     font-size: 18px !important;
     font-weight: bold !important;
+    text-transform: none !important;
     &:first-child {border: none;}
   }
 }
