@@ -20,6 +20,7 @@
     padding: 1em 4% 0.2em 4% !important;
     border-top: 1px solid $softBlue;
     color: $mine !important;
+    text-transform: none !important;
     @media only screen and (max-width: 900px) {padding: 0.4em 10px !important;}
   }
   h1 {
@@ -46,6 +47,7 @@
     margin: 30px 4% !important;
     border-left: 3px solid $silver !important;
     font-size: 18px !important;
+    text-transform: none !important;
     p {
       margin: 0 !important;
       padding: 0 !important;
@@ -72,6 +74,7 @@
   }
   li {
     margin: 1em 0.8em 1em 0 !important;
+    text-transform: none !important;
   }
   a {
     text-decoration: underline !important;
@@ -81,6 +84,7 @@
     font-size: 18px !important;
     background: $white !important;
     transition: color 0.3s !important;
+    text-transform: none !important;
     &:hover, &:active, &:focus {
       text-decoration: underline !important;
       font-weight: normal !important;
