@@ -1,97 +1,153 @@
+/* ==========================================================
+ * navigation.scss
+ * Side navigation and inside navigation styles
+ *
+ * Author: Yann Gouffon, hello@yago.io
+ *
+ * Copyright 2014 Yann Gouffon
+ * Licensed under MIT
+ ========================================================== */
+
 .cortana-menu-btn {
-  width: 28px;
-  height: 28px;
-  margin: 0;
-  position: absolute;
-  left: 25px;
-  top: 20px;
+  width: 28px !important;
+  height: 28px !important;
+  margin: 0 !important;
+  position: absolute !important;
+  left: 25px !important;
+  top: 20px !important;
   &:hover {
-    cursor: pointer;
-    span {background: $white;}
+    cursor: pointer !important;
+    span {background: $mine !important;}
   }
   span {
-    display: block;
-    width: 100%;
-    height: 4px;
-    border-radius: 1px;
-    margin: 5px 0;
-    background: $clouds;
+    display: block !important;
+    width: 100% !important;
+    height: 4px !important;
+    border-radius: 1px !important;
+    margin: 5px 0 !important;
+    background: $concrete !important;
+    transition: background 0.3s !important;
+  }
+  @media only screen and (max-width: 767px) {
+    top: 12px !important;
   }
 }
 
 .cortana-sidenav {
-  background: $white;
+  background: $night !important;
 }
 
 .cortana-nav {
-  padding: 10px 0;
-  margin: 0;
+  padding: 10px 0 !important;
+  padding-top: 20px !important;
+  margin: 0 !important;
   ul {
-    padding: 0;
-    margin: 0;
+    padding: 0 !important;
+    margin: 0 !important;
   }
-  li {list-style-type: none;}
+  li {
+    list-style-type: none !important;
+    display: inline !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+  }
   li a {
-    display: block;
-    width: 90%;
-    padding: 3px 5%;
-    text-decoration: none;
-    font-family: $mainFont;
-    color: $alizarin;
-    &:hover, &.active {
-      background: $alizarin;
-      color: $white;
+    display: block !important;
+    width: 100% !important;
+    padding: 3px 5% !important;
+    text-decoration: none !important;
+    font-family: $mainFont !important;
+    color: $clouds !important;
+    margin: 0 !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    text-transform: none !important;
+    background: transparent !important;
+    border: none !important;
+    transition: all 0.3s !important;
+    font-size: 16px !important;
+    box-sizing: border-box !important;
+    &:hover, &:focus {
+      background: transparent !important;
+      color: $alizarin !important;
+      font-size: 16px !important;
+      text-decoration: none !important;
+    }
+    &.active {
+      background: $alizarin !important;
+      color: $white !important;
+      font-size: 16px !important;
+      text-decoration: none !important;
     }
   }
   h3 {
-    padding: 0 5%;
-    margin: 20px 0 10px 0;
-    padding-top: 20px;
-    font-family: $mainFont;
-    border-top: 1px solid $silver !important;
-    font-size: 16px;
-    font-weight: normal;
+    padding: 0 5% !important;
+    margin: 20px 0 10px 0 !important;
+    padding-top: 20px !important;
+    font-family: $mainFont !important;
+    color: $clouds !important;
+    border-top: 1px solid lighten($night, 15%) !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    text-transform: none !important;
     &:first-child {border: none;}
   }
 }
 
 .cortana-inside-nav {
-  margin-left: -190px;
-  width: 170px;
-  float: left;
-  margin-top: 100px;
+  margin-left: -190px !important;
+  width: 170px !important;
+  float: left !important;
+  margin-top: 100px !important;
   &.cortana-stick-bottom {
     position: fixed !important;
     top: 0px !important;
     bottom: auto !important;
   }
   a {
-    color: $mine;
-    display: block;
-    width: 100%;
-    padding: 5px 0;
-    text-decoration: none;
-    font-family: $mainFont;
-    &:hover, &.active {color: $alizarin;}
+    color: $mine !important;
+    display: block !important;
+    width: 100% !important;
+    padding: 5px 0 !important;
+    text-decoration: none !important;
+    font-family: $mainFont !important;
+    transition: color 0.2s !important;
+    font-size: 16px !important;
+    background: transparent !important;
   }
-  li {list-style-type: none;}
+  li {
+    list-style-type: none  !important;
+    display: block !important;
+    margin: 0 !important;
+    &.active a, a:hover, a:focus {
+      color: $alizarin !important;
+      font-size: 16px !important;
+      background: transparent !important;
+      text-decoration: none !important;
+    }
+  }
   ul {
-    position: relative;
-    top: -100px;
-    margin-top: 100px;
+    position: relative  !important;
+    padding: 0 !important;
+    top: -100px  !important;
+    margin-top: 100px  !important;
   }
   @media only screen and (max-width: 1280px) {
-    float: none;
-    width: 100%;
-    margin-top: 0;
-    margin-left: 0;
-    padding: 0 30px;
+    float: none !important;
+    width: 100% !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    padding: 0 30px !important;
+    position: relative !important;
+    z-index: 10 !important;
     li {
-      display: inline-block;
-      width: 45%;
+      display: inline-block !important;
+      width: 45% !important;
     }
     ul {
-      position: static;
+      position: static !important;
     }
   }
 }

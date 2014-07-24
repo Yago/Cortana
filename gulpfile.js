@@ -14,58 +14,65 @@ var gulp = require('gulp'),
 
 // SASS compile, autoprefix and minify task
 gulp.task('styles', function() {
-  return gulp.src('./assets/sass/cortana.scss')
+  return gulp.src('assets/sass/cortana.scss')
     .pipe(sass())
     .on('error', gutil.beep)
     .on('error', notify.onError("Error: <%= error.message %>"))
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
     .pipe(minifycss())
-    .pipe(gulp.dest('./build/css'));
+    .pipe(gulp.dest('theme-build/css'));
 });
 
 // CSS vendors concat and minify
 gulp.task('css_vendors', function() {
   gulp.src([
-      './vendors/Slidebars/distribution/0.9.4/slidebars.css'
+      'vendors/Slidebars/distribution/0.9.4/slidebars.css',
+      'vendors/angular-motion/dist/angular-motion.css'
     ])
     .pipe(concat('vendors.css'))
     .pipe(minifycss())
-    .pipe(gulp.dest('./build/css'))
+    .pipe(gulp.dest('theme-build/css'))
 });
 
 // JS task
 gulp.task('scripts', function() {
-  gulp.src('./assets/js/*.js')
+  gulp.src('assets/js/*.js')
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'))
     .pipe(concat('main.js'))
-    .pipe(gulp.dest('./build/js'))
+    .pipe(gulp.dest('theme-build/js'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(uglify())
-    .pipe(gulp.dest('./build/js'));
+    .pipe(gulp.dest('theme-build/js'));
 });
 
 // JS vendors concat and minify
 gulp.task('js_vendors', function() {
   gulp.src([
-      './vendors/jquery/dist/jquery.js',
-      './vendors/Slidebars/distribution/0.9.4/slidebars.min.js',
-      './vendors/sticky-kit/jquery.sticky-kit.js'
+      'vendors/jquery/jquery.js',
+      'vendors/Slidebars/distribution/0.9.4/slidebars.min.js',
+      'vendors/angular/angular.js',
+      'vendors/angular-animate/angular-animate.js',
+      'vendors/angular-strap/dist/angular-strap.min.js',
+      'vendors/angular-strap/dist/angular-strap.tpl.min.js',
+      'vendors/angular-bootstrap/ui-bootstrap.js',
+      'vendors/angular-bootstrap/ui-bootstrap-tpls.js'
     ])
     .pipe(concat('vendors.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('./build/js'));
+    .pipe(gulp.dest('theme-build/js'));
 });
 
 gulp.task('browser-sync', function() {
-    browserSync.init(['../docs/build/css/*.css', '../docs/*.html', '../docs/build/js/*.js'], {
-      proxy: 'localhost'
+    browserSync.init(['theme-build/css/*.css', '*.html', 'theme-build/js/*.js'], {
+      proxy: 'localhost',
+      open: false
     });
 });
 
 gulp.task('default', ['watch', 'js_vendors', 'css_vendors', 'styles', 'scripts', 'browser-sync']);
 
 gulp.task('watch', function() {
-  gulp.watch('./assets/sass/*.scss', ['styles']);
-  gulp.watch('./assets/js/*.js', ['scripts']);
+  gulp.watch('assets/sass/*.scss', ['styles']);
+  gulp.watch('assets/js/*.js', ['scripts']);
 });

@@ -1,0 +1,97 @@
+/* ==========================================================
+ * search.scss
+ * Search field and autocomplete styles
+ *
+ * Author: Yann Gouffon, hello@yago.io
+ *
+ * Copyright 2014 Yann Gouffon
+ * Licensed under MIT
+ ========================================================== */
+
+.cortana-search {
+  position: absolute !important;
+  right: 25px !important;
+  top: 18px !important;
+  display: block !important;
+  width: 230px !important;
+  height: 38px !important;
+  box-sizing: border-box !important;
+  border-radius: 3px !important;
+  border: 1px solid $silver !important;
+  box-shadow: none !important;
+  padding: 5px 10px !important;
+  padding-left: 50px !important;
+  font-family: $mainFont !important;
+  font-size: 14px !important;
+  border-box: box-sizing !important;
+  &:focus{
+    outline: 0;
+    border: 1px solid $asbestos !important;
+  }
+  &::-webkit-input-placeholder {
+    font-style: italic;
+  }
+  &:-moz-placeholder {
+    font-style: italic;
+  }
+  background: url('../img/search-icon.svg') no-repeat 10px 6px !important;
+  background: url('../img/search-icon.png') no-repeat 10px 6px !important\9
+}
+
+@media only screen and (max-width: 767px) {
+  .cortana-search {display: none !important;}
+}
+
+/* custom styles for the typeahead */
+
+.cortana-search-wrapper .dropdown-menu {
+  width: 230px !important;
+  margin-top: 12px !important;
+  padding: 8px 0 !important;
+  background-color: $white !important;
+  border: 1px solid $silver !important;
+  border-radius: 3px !important;
+  box-shadow: 0 5px 10px rgba(0,0,0,.2) !important;
+}
+
+.cortana-search-wrapper li {
+  padding: 8px 15px !important;
+  font-family: $mainFont !important;
+  border-top: 1px solid $silver !important;
+  &:first-child {border: none !important;}
+}
+
+.cortana-search-wrapper li a {
+  text-decoration: none !important;
+  color: $mine !important;
+}
+
+.cortana-search-wrapper li.active {
+  a {color: $white !important;}
+  background-color: $alizarin !important;
+}
+
+.cortana-search-title {
+  font-weight: bold !important;
+  font-size: 14px !important;
+  margin: 0 !important;
+  margin-bottom: 5px !important;
+}
+
+.cortana-search-path {
+  font-weight: normal !important;
+  font-size: 12px !important;
+  margin: 0 !important;
+  word-wrap: break-word !important;
+  white-space: normal !important;
+}
+
+.dropdown-menu li a,
+.dropdown-menu li a:hover,
+.dropdown-menu li a:focus,
+.dropdown-menu .active a,
+.dropdown-menu .active a:hover,
+.dropdown-menu .active a:focus {
+  padding: 0 !important;
+  background: transparent !important;
+}

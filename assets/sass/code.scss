@@ -1,45 +1,79 @@
+/* ==========================================================
+ * code.scss
+ * Code highlight colors scheme
+ *
+ * Author: Yann Gouffon, hello@yago.io
+ *
+ * Copyright 2014 Yann Gouffon
+ * Licensed under MIT
+ ========================================================== */
+
 .cortana-content code, .cortana-content pre {
-  font-family: $codeFont;
-  font-size: 14px;
-  border: 1px solid $softBlue;
-  padding: 2px 5px;
-  border-radius: 2px;
+  font-family: $codeFont !important;
+  font-size: 14px !important;
+  border: 1px solid $silver !important;
+  padding: 2px 5px !important;
+  border-radius: 2px !important;
+  background: $white !important;
+  margin: 0 !important;
+  word-break: keep-all !important;
+  word-wrap: normal !important;
+  white-space:pre !important;
+  color: $mine !important;
 }
 
 .codeBlock {
-  padding: 30px 30px;
-  background: #1e221d;
-  color: $white;
-  font-size: 15px;
-  line-height: 1.6em;
-  overflow-x: scroll;
-  margin-bottom: 20px;
-  position: relative;
+  padding: 50px 4% !important;
+  background: #1e221d !important;
+  color: $white !important;
+  font-size: 15px !important;
+  line-height: 1.6em !important;
+  overflow-x: auto !important;
+  margin-bottom: 20px !important;
+  position: relative !important;
+  width: auto !important;
   &:after {
-    content: 'HTML';
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: $asbestos;
-    border-right: 1px solid $asbestos;
-    border-bottom: 1px solid $asbestos;
-    border-bottom-right-radius: 4px;
-    padding: 5px 8px;
-    display: inline-block;
-    font-family: $mainFont;
+    content: 'HTML' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    color: $asbestos !important;
+    border-right: 1px solid $asbestos !important;
+    border-bottom: 1px solid $asbestos !important;
+    border-bottom-right-radius: 4px !important;
+    padding: 5px 8px !important;
+    display: inline-block !important;
+    font-family: $mainFont !important;
   }
   &.jsExample:after {
-    content: 'JavaScript';
+    content: 'JavaScript' !important;
+  }
+  .highlight {
+    background: #1e221d !important;
   }
   pre {
-    font-family: $codeFont;
+    font-family: $codeFont !important;
+    width: auto !important;
+    background: #1e221d !important;
+    word-break: keep-all !important;
+    word-wrap: normal !important;
+    white-space:pre !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    padding-left: 15px !important;
+    font-size: 14px !important;
+    position: relative !important;
+    line-height: 1.6em !important;
+    color: $white !important;
+    border: 1px solid  #1e221d !important;
+    overflow: visible !important;
   }
-  @media only screen and (max-width: 900px) {padding: 30px 10px;}
+  @media only screen and (max-width: 900px) {padding: 50px 10px !important;}
 }
 .codeBlock {
   hll { background-color: #ffffcc }
   .c { color: #999988; font-style: italic } /* Comment */
-  .err { color: #a61717; background-color: #e3d2d2 } /* Error */
+  .err { color: #a61717;} /* Error */
   .k { color: #ffffff;} /* Keyword */
   .o { color: #ffffff;} /* Operator */
   .cm { color: #999988; font-style: italic } /* Comment.Multiline */
@@ -69,7 +103,7 @@
   .nc { color: #445588;} /* Name.Class */
   .no { color: #A6E22E } /* Name.Constant */
   .nd { color: #3c5d5d;} /* Name.Decorator */
-  .ni { color: #800080 } /* Name.Entity */
+  .ni { color: #AE81FF } /* Name.Entity */
   .ne { color: #990000;} /* Name.Exception */
   .nf { color: #990000;} /* Name.Function */
   .nl { color: #990000;} /* Name.Label */

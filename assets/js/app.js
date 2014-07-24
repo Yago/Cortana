@@ -1,6 +1,6 @@
 /* ==========================================================
- * cortana.scss
- * Import all sass files to be build
+ * app.js
+ * Angular app
  *
  * Author: Yann Gouffon, hello@yago.io
  *
@@ -8,9 +8,10 @@
  * Licensed under MIT
  ========================================================== */
 
-@import 'variables';
-@import 'layout';
-@import 'text';
-@import 'navigation';
-@import 'code';
-@import 'search';
+(function(){
+  var app = angular.module('cortana', ['mgcrea.ngStrap', 'ui.bootstrap']);
+
+  app.controller('MainController', function($scope) {
+  });
+
+})();

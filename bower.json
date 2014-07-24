@@ -1,9 +1,17 @@
 {
   "name": "Cortana",
-  "dependencies": {},
+  "version": "1.2.1",
+  "ignore": [
+    "**/.*",
+    "gulpfile.js",
+    "assets",
+    "package.json"
+  ],
   "devDependencies": {
-    "jquery": "1.11.*",
+    "jquery": "1.10.*",
     "Slidebars": "~0.9.4",
-    "sticky-kit": "~1.0.4"
+    "angular": "1.2.*",
+    "angular-strap": "2.0.*",
+    "angular-bootstrap": "0.11.*"
   }
 }
