@@ -3,6 +3,9 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes done.
 
+* 1.2.2(2014-08-05)
+  * Yago : fix markdown renderer issue from hologram 1.2.X
+
 * 1.2.1(2014-07-08)
   * Yago : fix text-transform weakness
 
