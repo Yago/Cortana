@@ -45,5 +45,9 @@
   <% @config['js_include'].each do |js| %>
     <script type="text/javascript" src="<%= js %>"></script>
   <% end %>
+  <!-- Source Components -->
+  <% @config['components_include'].each do |component| %>
+    <link rel="import" href="<%= component %>">
+  <% end %>
 </body>
 </html>
