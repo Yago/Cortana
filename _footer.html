@@ -1,3 +1,4 @@
+<% nameScope = @config['name_scope'] %>
         </div>
       </div>
     </div>
@@ -42,12 +43,16 @@
       <p class="cortana-search-path">{{match.model.breadcrumb}}</p>
     </a>
   </script>
-  <% @config['js_include'].each do |js| %>
-    <script type="text/javascript" src="<%= js %>"></script>
+  <% if @config['js_include'].to_s.strip.length != 0 %>
+    <% @config['js_include'].each do |js| %>
+      <script type="text/javascript" src="<%= js %>"></script>
+    <% end %>
   <% end %>
   <!-- Source Components -->
-  <% @config['components_include'].each do |component| %>
-    <link rel="import" href="<%= component %>">
+  <% if @config['components_include'].to_s.strip.length != 0 %>
+    <% @config['components_include'].each do |component| %>
+      <link rel="import" href="<%= component %>">
+    <% end %>
   <% end %>
 </body>
 </html>
