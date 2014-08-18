@@ -3,6 +3,9 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes done.
 
+* 1.2.5(2014-08-18)
+  * Yago : safer config elements loop
+
 * 1.2.3 & 1.2.4(2014-08-08)
   * Yago : Add web components support
 
