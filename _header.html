@@ -11,8 +11,10 @@
     <link rel="stylesheet" href="./theme-build/css/cortana.css">
 
     <!-- Source CSS -->
-    <% @config['css_include'].each do |css| %>
-      <link rel="stylesheet" href="<%= css %>">
+    <% if @config['css_include'].to_s.strip.length != 0 %>
+      <% @config['css_include'].each do |css| %>
+        <link rel="stylesheet" href="<%= css %>">
+      <% end %>
     <% end %>
 
     <!--[if lt IE 9]>
