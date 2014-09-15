@@ -17,7 +17,7 @@
     font-style: normal !important;
     margin: 2em 0 0.4em 0 !important;
     line-height: 1.2em !important;
-    padding: 1em 4% 0.2em 4% !important;
+    padding: 1em 30px 0.2em 30px !important;
     border-top: 1px solid $softBlue;
     color: $mine !important;
     text-transform: none !important;
@@ -38,13 +38,13 @@
   p {
     font-family: $mainFont !important;
     line-height: 1.6em !important;
-    padding: 0 4% !important;
+    padding: 0 30px !important;
     margin: 1.8em 0 !important;
     font-size: 18px !important;
     @media only screen and (max-width: 900px) {padding: 0 10px !important;}
   }
   blockquote, q {
-    margin: 30px 4% !important;
+    margin: 30px !important;
     border-left: 3px solid $silver !important;
     font-size: 18px !important;
     text-transform: none !important;
@@ -54,7 +54,7 @@
     }
   }
   table {
-    margin: 30px 4% !important;
+    margin: 30px !important;
     font-family: $mainFont !important;
     border-collapse:collapse !important;
     @media only screen and (max-width: 900px) {margin: 30px 10px !important;}
@@ -68,7 +68,7 @@
     color: $mine !important;
   }
   ul {
-    margin: 0 4% !important;
+    margin: 0 30px !important;
     padding-left: 2em !important;
     font-size: 1.1em !important
   }
