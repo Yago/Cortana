@@ -6,6 +6,10 @@ class Cortanamarkdownrenderer < Redcarpet::Render::HTML
         lexer = Rouge::Lexer.find('js')
         # first actually insert the code in the docs so that it will run and make our example work.
         '</div><script>' + code + '</script> <div class="codeBlock jsExample"><div class="highlight"><pre>' + formatter.format(lexer.lex(code)) + '</pre></div></div><div class="cortana-content">'
+      elsif language.include?('none')
+        # with `none_example`, just the rendered html gets rendered
+        lexer = Rouge::Lexer.find('none')
+        '</div><div class="col-sm-12">' + render_html(code, language) + '</div><div class="cortana-content">'
       else
         lexer = Rouge::Lexer.find(get_lexer(language))
         '</div><div class="codeExample">' + '<div class="exampleOutput">' + render_html(code, language) + '</div>' + '<div class="codeBlock"><div class="highlight"><pre>' + formatter.format(lexer.lex(code)) + '</pre></div></div>' + '</div><div class="cortana-content">'
