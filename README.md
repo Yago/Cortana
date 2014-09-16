@@ -2,7 +2,7 @@
 
 >Cortana is a nice theme for Trulia's [Hologram](https://github.com/trulia/hologram), the ruby front-end doc generator, and inspired by PebbleRoad's [Tapestry](https://github.com/PebbleRoad/tapestry).
 
-Check the [Demo](http://yago31.github.io/Cortana-example)
+Check the [Demo](http://yago.github.io/Cortana-example)
 
 ##Usage
 To install the last version of **Hologram** (required) :
