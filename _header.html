@@ -83,7 +83,7 @@
 
         <nav id="cortana-inside-nav" class="cortana-inside-nav" bs-affix>
           <ul bs-scrollspy-list data-offset="-30">
-            <% @blocks.each do |block| %> 
+            <% @blocks.each do |block| %>
               <% if not block[:parent] %>
                 <li><a href="#<%= block[:name] %>"><%= block[:title] %></a></li>
               <% end %>
@@ -91,7 +91,7 @@
           </ul>
         </nav>
 
-        <div class="cortana-content-wrapper">
+        <div class="cortana-content-wrapper clearfix">
           <div class="cortana-content">
 
 
