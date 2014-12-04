@@ -3,7 +3,11 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes done.
 
-* 1.2.5(2014-08-21)
+* 1.2.8(2014-12-04)
+  * zufrieden : isolate Cortana's search dropdown-menu
+  * tonifisler : remove background color from footer and fix angular install
+
+* 1.2.7(2014-08-21)
   * Yago : lock header title styles
 
 * 1.2.5(2014-08-18)
