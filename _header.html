@@ -17,6 +17,13 @@
       <% end %>
     <% end %>
 
+    <!-- Header Scripts (like modernizr) -->
+    <% if @config['head_js_include'].to_s.strip.length != 0 %>
+      <% @config['head_js_include'].each do |js| %>
+        <script type="text/javascript" src="<%= js %>"></script>
+      <% end %>
+    <% end %>
+
     <!--[if lt IE 9]>
       <script src="theme-build/polyfill/html5shiv.js"></script>
       <script src="theme-build/polyfill/respond.min.js"></script>
