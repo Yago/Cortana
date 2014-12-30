@@ -44,11 +44,9 @@
 
       <nav class="cortana-nav">
         <ul>
-          <% if file_name.include?('index.html') %>
-            <li><a class="active" href="index.html">Home</a></li>
-          <% else %>
-            <li><a href="index.html">Home</a></li>
-          <% end %>
+            <li><a class="<% if file_name.include?('index.html') %>active <% end %>" href="index.html">Home</a></li>
+            <li><a class="<% if file_name.include?('pattern-examples.html') %>active <% end %>" href="pattern-examples.html">Pattern Examples</a></li>
+            <li><a class="<% if file_name.include?('pattern-recipes.html') %>active <% end %>" href="pattern-recipes.html">Pattern Recipes</a></li>
         </ul>
         <% catWrappers.each do |wrapper| %>
           <h3><%= wrapper %></h3>
@@ -73,6 +71,12 @@
         <h1><%= title.split(nameScope).last %></h1>
       <% elsif file_name.include?('index.html') %>
         <h1>Styleguide home</h1>
+      <% elsif file_name.include?('pattern-examples.html') %>
+        <h1>Pattern Examples</h1>
+      <% elsif file_name.include?('pattern-recipes.html') %>
+        <h1>Pattern Recipes</h1>
+      <% else %>
+        <h1><%= File.basename(file_name, '.html').gsub('-', ' ') %></h1>
       <% end %>
       <div id="open-left" class="cortana-menu-btn">
         <span></span>
