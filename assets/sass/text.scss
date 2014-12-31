@@ -10,7 +10,7 @@
 
 .cortana-content {
   font-size: 18px;
-  line-height: 1.6em;
+  line-height: 1.44em;
   padding: 0 30px;
   h1, h2, h3, h4, h5, h6{
     font-family: $mainFont;
@@ -29,8 +29,11 @@
     @media only screen and (max-width: 900px) {font-size: 28px;}
   }
   h2 {
-    margin-bottom: 18px;
+    margin: 2em 0 1em;
     font-size: 32px;
+  }
+  h1 + h2 {
+    margin-top: 0;
   }
   h3 {
     margin-bottom: 16px;
@@ -76,11 +79,12 @@
   ul, ol {
     margin: 0 0 1em;
     padding-left: 2em;
-    font-size: 1em
+    font-size: 1em;
+    line-height: 1.2;
   }
 
   li {
-    //margin: 0;
+    margin-bottom: .5em;
     text-transform: none;
   }
   a {
