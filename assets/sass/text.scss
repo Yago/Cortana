@@ -9,7 +9,7 @@
  ========================================================== */
 
 .cortana-content {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.44em;
   padding: 0 30px;
   h1, h2, h3, h4, h5, h6{
@@ -29,8 +29,8 @@
     @media only screen and (max-width: 900px) {font-size: 28px;}
   }
   h2 {
-    margin: 2em 0 1em;
-    font-size: 32px;
+    margin: 1.5em 0 1em;
+    font-size: 34px;
   }
   h1 + h2 {
     margin-top: 0;
@@ -42,21 +42,28 @@
   }
   h4 {
     margin-bottom: .5em;
-    font-size: 18px;
+    font-size: 1em;
     font-weight: 600;
   }
   p {
     font-family: $mainFont;
     line-height: 1.44em;
     margin: 0 0 1em;
-    font-size: 18px;
+    font-size: 1em;
     @media only screen and (max-width: 900px) {padding: 0 10px;}
   }
   blockquote, q {
     margin: 0 0 1em;
+    padding-left: 1em;
     border-left: 3px solid $silver;
-    font-size: 18px;
+    font-size: 15px;
+    line-height: 1.2;
     text-transform: none;
+    color: lighten($mine, 20%);
+    li {
+      list-style: none;
+      line-height: 1.2;
+    }
     p {
       margin: 0;
       padding: 0;
@@ -84,7 +91,7 @@
   }
 
   li {
-    margin-bottom: .5em;
+    margin-bottom: .3em;
     text-transform: none;
   }
   a {
@@ -92,7 +99,7 @@
     font-weight: normal;
     color: $rh-blue;
     font-style: normal;
-    font-size: 18px;
+    font-size: 1em;
     background: $white;
     transition: color 0.3s;
     text-transform: none;
@@ -100,7 +107,7 @@
       text-decoration: underline;
       font-weight: normal;
       font-style: normal;
-      font-size: 18px;
+      font-size: 1em;
       background: $white;
     }
   }
