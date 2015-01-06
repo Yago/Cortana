@@ -7,12 +7,6 @@
     "assets",
     "package.json"
   ],
-  "main": [
-    "theme-build/**/*.*",
-    "_header.html",
-    "_footer.html",
-    "CortanaMarkdownRenderer.rb"
-  ],
   "devDependencies": {
     "jquery": "1.10.*",
     "Slidebars": "~0.9.4",
