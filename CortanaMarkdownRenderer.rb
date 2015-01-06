@@ -16,6 +16,38 @@ class Cortanamarkdownrenderer < Redcarpet::Render::HTML
             </div>
           </div>
         <div class="cortana-content">'
+      elsif language.include?('container')
+        # with `container`,
+        lexer = Rouge::Lexer.find('html')
+        '</div>
+          <div class="codeExample">
+            <div class="exampleOutput preview">
+              <div class="container">
+              ' + render_html(code, language) + '
+              </div>
+            </div>
+            <div class="codeBlock">
+              <div class="highlight">
+                <pre>' + formatter.format(lexer.lex(code)) + '</pre>
+              </div>
+            </div>
+          </div>
+        <div class="cortana-content">'
+      elsif language.include?('full')
+        # with ``,
+        lexer = Rouge::Lexer.find('html')
+        '</div>
+          <div class="codeExample">
+            <div class="exampleOutput preview">
+            ' + render_html(code, language) + '
+            </div>
+            <div class="codeBlock">
+              <div class="highlight">
+                <pre>' + formatter.format(lexer.lex(code)) + '</pre>
+              </div>
+            </div>
+          </div>
+        <div class="cortana-content">'
       else
         lexer = Rouge::Lexer.find(get_lexer(language))
         '</div>
@@ -27,6 +59,30 @@ class Cortanamarkdownrenderer < Redcarpet::Render::HTML
               <div class="highlight">
                 <pre>' + formatter.format(lexer.lex(code)) + '</pre>
               </div>
+            </div>
+          </div>
+        <div class="cortana-content">'
+      end
+    elsif language and language.include?('none')
+      if language.include?('container')
+        # with `container`,
+        lexer = Rouge::Lexer.find('html')
+        '</div>
+          <div class="codeExample">
+            <div class="exampleOutput">
+              <div class="container">
+              ' + render_html(code, language) + '
+              </div>
+            </div>
+          </div>
+        <div class="cortana-content">'
+      elsif language.include?('full')
+        # with ``,
+        lexer = Rouge::Lexer.find('html')
+        '</div>
+          <div class="codeExample">
+            <div class="exampleOutput">
+            ' + render_html(code, language) + '
             </div>
           </div>
         <div class="cortana-content">'

@@ -13,6 +13,13 @@
   z-index: auto;
 }
 
+.codeExample .container {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+}
+
 .cortana-header {
   background: $white;
   padding: 21px 0;

@@ -35,6 +35,7 @@
   width: 100%;
   overflow-y: auto;
   box-sizing: border-box;
+  padding: 40px 0 20px;
   &.preview:after {
     content: 'Preview';
     position: absolute;
@@ -53,7 +54,7 @@
 
 // code
 .codeBlock {
-  padding: 20px 4%;
+  padding: 40px 20px 20px;
   background: #1e221d;
   color: $white;
   font-size: 15px;
