@@ -22,17 +22,38 @@
   color: $mine;
 }
 
-.codeExample, .codeBlock {
-  margin: 3em 0 4em;
+// preview and code
+.codeExample {
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  margin-bottom: 2em;
 }
 
-.codeExample .codeBlock {
-  margin: 0;
-  margin-bottom: 20px;
+// preview only
+.exampleOutput {
+  position: relative;
+  width: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+  &.preview:after {
+    content: 'Preview';
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: $asbestos;
+    border-right: 1px solid $asbestos;
+    border-bottom: 1px solid $asbestos;
+    border-bottom-right-radius: 4px;
+    padding: 5px 8px;
+    display: inline-block;
+    font-family: $mainFont;
+  }
 }
 
+
+// code
 .codeBlock {
-  padding: 50px 4%;
+  padding: 20px 4%;
   background: #1e221d;
   color: $white;
   font-size: 15px;

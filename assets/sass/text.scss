@@ -8,10 +8,14 @@
  * Licensed under MIT
  ========================================================== */
 
+
+
 .cortana-content {
   font-size: 16px;
   line-height: 1.44em;
-  padding: 0 30px;
+  padding: 0 15px;
+  max-width: 1300px;
+  margin: 0 auto;
   h1, h2, h3, h4, h5, h6{
     font-family: $mainFont;
     font-weight: bold;
@@ -26,19 +30,25 @@
     margin-bottom: 18px;
     font-size: 42px;
     color: $rh-red;
+    margin-top: 60px;
     @media only screen and (max-width: 900px) {font-size: 28px;}
   }
+  &:first-child h1 {
+    margin-top: 0;
+  }
   h2 {
-    margin: 1.5em 0 1em;
+    margin: 1.5em 0 .5em;
     font-size: 34px;
+    font-weight: 400;
+    color: lighten($mine, 10%);
   }
   h1 + h2 {
     margin-top: 0;
   }
   h3 {
-    margin-bottom: 16px;
+    margin-bottom: 12px;
     font-size: 28px;
-    font-weight: 400;
+    font-weight: 300;
   }
   h4 {
     margin-bottom: .5em;
