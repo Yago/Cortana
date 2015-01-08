@@ -33,7 +33,7 @@
     margin-top: 60px;
     @media only screen and (max-width: 900px) {font-size: 28px;}
   }
-  &:first-child h1 {
+  &:first-child h1:first-child {
     margin-top: 0;
   }
   h2 {
