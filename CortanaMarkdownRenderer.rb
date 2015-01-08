@@ -13,15 +13,15 @@ class Cortanamarkdownrenderer < Redcarpet::Render::HTML
       lexer = Rouge::Lexer.find('html')
       '</div>
       <div class="codeExample">
-        <div class="exampleOutput">
-          <div class="exampleLabel" ng-show=' + is_preview(language) + '>Preview</div>
-          <div class="' + is_container(language) + '">
+        <div class="exampleOutput ' + has_container(language) + '" >
+          <div class="exampleLabel">Preview</div>
+          <div class="exampleContainer">
           ' + code + '
           </div>
         </div>
         <div class="codeBlock"  ng-show= ' + code_is_visible(language) + '>
-          <div class="codeLabel" ng-click="codeBlock' + r.to_s + '= !codeBlock' + r.to_s + '">HTML</div>
-          <div class="highlight" ng-show="' + code_is_open(language) + ' || codeBlock' + r.to_s + '">
+          <div class="codeLabel" ng-show= ' + is_preview(language) + ' ng-click="codeBlock' + r.to_s + '= !codeBlock' + r.to_s + '">HTML</div>
+          <div class="highlight" ng-show="' + code_is_toggle(language) + ' || codeBlock' + r.to_s + '">
             <pre>' + formatter.format(lexer.lex(code)) + '</pre>
           </div>
         </div>
@@ -47,9 +47,9 @@ class Cortanamarkdownrenderer < Redcarpet::Render::HTML
   end
 
   private
-  def is_container(language)
+  def has_container(language)
     if language.include?('container')
-      'container'
+      'has-container'
     else
       ''
     end
@@ -71,7 +71,7 @@ class Cortanamarkdownrenderer < Redcarpet::Render::HTML
     end
   end
 
-  def code_is_open(language)
+  def code_is_toggle(language)
     if language.include?('toggle')
       'false'
     else

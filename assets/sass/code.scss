@@ -24,8 +24,7 @@
 
 // preview and code
 .codeExample {
-  // border-bottom: 1px solid #ddd;
-  // border-top: 1px solid #ddd;
+
 }
 
 // preview only
@@ -45,6 +44,12 @@
     padding: 5px 8px;
     color: white;
     font-family: $mainFont;
+  }
+}
+
+.has-container {
+  .exampleLabel {
+    display: none;
   }
 }
 
