@@ -8,96 +8,117 @@
  * Licensed under MIT
  ========================================================== */
 
+
+
 .cortana-content {
-  font-size: 18px !important;
-  line-height: 1.6em !important;
+  font-size: 16px;
+  line-height: 1.44em;
+  padding: 0 15px;
+  max-width: 1300px;
+  margin: 0 auto;
   h1, h2, h3, h4, h5, h6{
-    font-family: $mainFont !important;
-    font-weight: bold !important;
-    font-style: normal !important;
-    margin: 2em 0 0.4em 0 !important;
-    line-height: 1.2em !important;
-    padding: 1em 30px 0.2em 30px !important;
-    border-top: 1px solid $softBlue;
-    color: $mine !important;
-    text-transform: none !important;
-    @media only screen and (max-width: 900px) {padding: 0.4em 10px !important;}
+    font-family: $mainFont;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1.2em;
+    margin-top: 0;
+    color: $mine;
+    text-transform: none;
+    @media only screen and (max-width: 900px) {padding: 0.4em 10px;}
   }
   h1 {
-    font-size: 36px !important;
-    @media only screen and (max-width: 900px) {font-size: 28px !important;}
+    margin-bottom: 18px;
+    font-size: 42px;
+    color: $rh-red;
+    margin-top: 60px;
+    @media only screen and (max-width: 900px) {font-size: 28px;}
+  }
+  &:first-child h1:first-child {
+    margin-top: 0;
   }
   h2 {
-    font-size: 28px !important;
-    @media only screen and (max-width: 900px) {font-size: 23px !important;}
+    margin: 1.5em 0 .5em;
+    font-size: 38px;
+    font-weight: 300;
+    color: lighten($mine, 10%);
+  }
+  h1 + h2 {
+    margin-top: 0;
   }
   h3 {
-    font-size: 25px !important;
-    @media only screen and (max-width: 900px) {font-size: 21px !important;}
+    margin: 30px 0 12px;
+    font-size: 28px;
+    font-weight: 100;
+  }
+  h4 {
+    margin-bottom: .5em;
+    font-size: 1em;
+    font-weight: 600;
   }
   p {
-    font-family: $mainFont !important;
-    line-height: 1.6em !important;
-    padding: 0 30px !important;
-    margin: 1.8em 0 !important;
-    font-size: 18px !important;
-    @media only screen and (max-width: 900px) {padding: 0 10px !important;}
+    font-family: $mainFont;
+    line-height: 1.44em;
+    margin: 0 0 1em;
+    font-size: 1em;
+    @media only screen and (max-width: 900px) {padding: 0 10px;}
   }
   blockquote, q {
-    margin: 30px !important;
-    border-left: 3px solid $silver !important;
-    font-size: 18px !important;
-    text-transform: none !important;
+    margin: 0 0 1em;
+    padding-left: 1em;
+    border-left: 3px solid $silver;
+    font-size: 15px;
+    line-height: 1.2;
+    text-transform: none;
+    color: lighten($mine, 20%);
+    li {
+      list-style: none;
+      line-height: 1.2;
+    }
     p {
-      margin: 0 !important;
-      padding: 0 !important;
+      margin: 0;
+      padding: 0;
     }
   }
   table {
-    margin: 30px !important;
-    font-family: $mainFont !important;
-    border-collapse:collapse !important;
-    @media only screen and (max-width: 900px) {margin: 30px 10px !important;}
+    margin: 30px;
+    font-family: $mainFont;
+    border-collapse:collapse;
+    @media only screen and (max-width: 900px) {margin: 30px 10px;}
   }
   table tr, table td, table th {
-    padding: 10px 15px !important;
-    border: 1px solid #ccc !important;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
   }
   table th {
-    font-weight: bold !important;
-    color: $mine !important;
+    font-weight: bold;
+    color: $mine;
   }
-  ul {
-    margin: 0 30px !important;
-    padding-left: 2em !important;
-    font-size: 1.1em !important
+  ul, ol {
+    margin: 0 0 1em;
+    padding-left: 2em;
+    font-size: 1em;
+    line-height: 1.2;
   }
+
   li {
-    margin: 1em 0.8em 1em 0 !important;
-    text-transform: none !important;
+    margin-bottom: .3em;
+    text-transform: none;
   }
   a {
-    text-decoration: underline !important;
-    font-weight: normal !important;
-    color: $mine !important;
-    font-style: normal !important;
-    font-size: 18px !important;
-    background: $white !important;
-    transition: color 0.3s !important;
-    text-transform: none !important;
+    text-decoration: underline;
+    font-weight: normal;
+    color: $rh-blue;
+    font-style: normal;
+    font-size: 1em;
+    background: $white;
+    transition: color 0.3s;
+    text-transform: none;
     &:hover, &:active, &:focus {
-      text-decoration: underline !important;
-      font-weight: normal !important;
-      color: $alizarin !important;
-      font-style: normal !important;
-      font-size: 18px !important;
-      background: $white !important;
-    }
-  }
-  &:first-child {
-    h1, h2, h3, h4, h5, h6 {
-      margin-top: 0 !important;
-      border: none !important;
+      text-decoration: underline;
+      font-weight: normal;
+      font-style: normal;
+      font-size: 1em;
+      background: $white;
     }
   }
 }

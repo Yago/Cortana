@@ -9,6 +9,8 @@
  ========================================================== */
 
 // Flat COLORS
+$rh-red:           #c00;
+$rh-blue:          #08c0fc;
 $turquoise:        #1ABC9C;
 $greenSea:         #16A085;
 $emerald:          #2ECC71;
@@ -41,5 +43,5 @@ $softBlue:         lighten($wetAsphalt, 68%);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic);
 @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro);
 
-$mainFont:         'Open Sans', sans-serif;
+$mainFont:         'Roboto', sans-serif;
 $codeFont:         Monaco, monospace;
