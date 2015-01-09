@@ -31,10 +31,35 @@ class Cortanamarkdownrenderer < Redcarpet::Render::HTML
       r = rand(100000)
       lexer = Rouge::Lexer.find('css')
       '</div>
-        <div class="codeBlock recipe"  ng-show= ' + code_is_visible(language) + '>
+        <div class="codeBlock recipe">
           <div class="codeLabel" ng-click="recipeBlock' + r.to_s + '= !recipeBlock' + r.to_s + '">Recipe</div>
           <div class="highlight" ng-show="recipeBlock' + r.to_s + '">
             <pre>' + formatter.format(lexer.lex(code)) + '</pre>
+          </div>
+        </div>
+      <div class="cortana-content">'
+    elsif language and language.include?('themed')
+      r = rand(100000)
+      lexer = Rouge::Lexer.find('html')
+      '</div>
+        <div class="codeExample">
+          <div class="exampleOutput has-container" >
+            <div class="exampleContainer">
+              <div data-rh-layout="6 6">
+                  <section>
+                      <h3 class="exampleThemeTitle">Default</h3>
+                      <div class="rh-card--layout" data-rh-theme="light">
+                          ' + code + '
+                      </div>
+                  </section>
+                  <section>
+                      <h3 class="exampleThemeTitle">Dark Theme</h3>
+                      <div class="rh-card--layout" data-rh-theme="dark">
+                          ' + code + '
+                      </div>
+                  </section>
+              </div>
+            </div>
           </div>
         </div>
       <div class="cortana-content">'

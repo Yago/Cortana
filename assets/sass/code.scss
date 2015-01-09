@@ -45,6 +45,15 @@
     color: white;
     font-family: $mainFont;
   }
+  .exampleThemeTitle {
+    font-family: $mainFont;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1.2em;
+    margin-top: 0;
+    color: $mine;
+    text-transform: none;
+  }
 }
 
 .has-container {
