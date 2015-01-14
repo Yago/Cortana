@@ -1,6 +1,8 @@
 <% nameScope = @config['name_scope'] %>
+<% htmlClass = @config['html_class'] %>
 <!DOCTYPE html>
-<html ng-app="cortana">
+<html ng-app="cortana" <% if htmlClass %>class="<%= htmlClass %>"<% end %>>
+<head>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">

@@ -45,6 +45,9 @@ js_include:
   - 'http://code.jquery.com/jquery-1.10.2.min.js'
   - '../assets/js/main.js'
 
+# Add one or more css classes to the <html> element. E.g. 'no-js' if you want to use Modernizr in your styleguide
+# html_class: 'no-js'
+
 # String who is used to split the category name and create category wrapper
 name_scope: ' - '
 ````
