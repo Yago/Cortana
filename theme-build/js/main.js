@@ -9,7 +9,7 @@
  ========================================================== */
 
 (function(){
-  var app = angular.module('cortana', ['mgcrea.ngStrap', 'ui.bootstrap']);
+  var app = angular.module('cortana', ['ui.bootstrap']);
 
   app.controller('MainController', function($scope) {
   });
@@ -33,7 +33,7 @@
     // });
     $('#open-left').on('click', function(event) {
       event.preventDefault();
-      cortanaSlidebars.toggle('left');
+      cortanaSlidebars.slidebars.toggle('left');
     });
 
   });
