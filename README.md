@@ -1,3 +1,5 @@
+**Developement stopped, to benefit of [Toolbox](http://frontend.github.io/toolbox/) generator. Feel free to fork and keep maintaining :wink:**
+
 #Cortana : a sexy Hologram theme
 
 >Cortana is a nice theme for Trulia's [Hologram](https://github.com/trulia/hologram), the ruby front-end doc generator, and inspired by PebbleRoad's [Tapestry](https://github.com/PebbleRoad/tapestry).
