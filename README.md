@@ -1,4 +1,4 @@
-**Developement stopped, to benefit of [Toolbox](http://frontend.github.io/toolbox/) generator. Feel free to fork and keep maintaining :wink:**
+**!Developement stopped, to benefit of [Toolbox](http://frontend.github.io/toolbox/) generator!** Feel free to fork and keep maintaining :wink:
 
 #Cortana : a sexy Hologram theme
 
