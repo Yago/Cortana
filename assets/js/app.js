@@ -9,7 +9,7 @@
  ========================================================== */
 
 (function(){
-  var app = angular.module('cortana', ['mgcrea.ngStrap', 'ui.bootstrap']);
+  var app = angular.module('cortana', ['ui.bootstrap']);
 
   app.controller('MainController', function($scope) {
   });

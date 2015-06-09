@@ -5,16 +5,13 @@
     "**/.*",
     "gulpfile.js",
     "assets",
-    "package.json"
+    "package.json",
+    "vendors"
   ],
   "devDependencies": {
-    "jquery": "1.10.*",
-    "Slidebars": "~0.9.4",
-    "angular": "1.2.*",
-    "angular-strap": "2.0.*",
-    "angular-bootstrap": "0.11.*"
-  },
-  "resolutions": {
-    "angular": "1.3.0"
+    "Slidebars": "~0.10.3",
+    "angular": "~1.4.0",
+    "angular-bootstrap": "~0.13.0",
+    "jquery": "~2.1.4"
   }
 }

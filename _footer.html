@@ -14,7 +14,8 @@
   </script>
   <script src="theme-build/js/main.js"></script>
   <script type="text/javascript">
-    function TypeaheadCtrl($scope) {
+
+    angular.module("cortana").controller("TypeaheadCtrl", function($scope) {
       $scope.selected = undefined;
       $scope.searchData = 
       <%= "[" %>
@@ -35,7 +36,8 @@
       $scope.onSelect = function ($item, $model, $label) {
         window.location.replace($item.path);
       };
-    }
+    });
+
   </script>
   <script type="text/ng-template" id="customTemplate.html">
     <a href="{{match.model.path}}">
